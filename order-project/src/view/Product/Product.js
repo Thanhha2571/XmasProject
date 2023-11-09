@@ -40,7 +40,7 @@ const Product = (props) => {
         },
     ];
     return (
-        <div className="flex flex-col font-Changa px-40 py-8 w-full h-auto gap-16 bg-backGround opacity-95 justify-center items-center border ">
+        <div className="flex flex-col font-Changa px-40 py-8 w-full h-auto gap-16 bg-backGround opacity-95 justify-center items-center ">
             <div className="font-bold text-[#E3D5C8] text-[60px] font-DancingScript gap-10">M E N U</div>
             {productList.map((product,index) =>
                 <ProductItem

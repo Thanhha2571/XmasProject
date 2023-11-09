@@ -8,7 +8,7 @@ import ImgBackground from "../../asset/ImgBackground.jpg"
 const Header = () => {
     return (
         <div className="w-full relative mb-[720px] flex flex-col items-center">
-            <div className="bg-backGround w-full h-[720px] z-10 absolute opacity-95 border border-slate-800"></div>
+            <div className="bg-backGround w-full h-[720px] z-10 absolute opacity-95"></div>
             {/* <img src={ImgBackground} className="absolute w-full h-[720px]" /> */}
             <img src={ChristmasBall} className="absolute z-30 mt-20 w-[450px] h-[450px]" />
             <div className="flex flex-row gap-10 font-DancingScript absolute z-30 text-textColor text-[60px] top-[600px]">
