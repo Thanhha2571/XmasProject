@@ -37,7 +37,11 @@ const CustomerForm = () => {
         // Log the parsed value
         console.log(parsedProducts);
 
+        const pick_up_place  = localStorage.getItem('pick_up_place');
+        const pick_up_date = localStorage.getItem('pick_up_date');
         const { data } = await axios.post("http://localhost:8080/api/order/orderForm", {
+            pick_up_date: pick_up_date,
+            pick_up_place: pick_up_place,
             first_name: values.user.first_name,
             last_name: values.user.last_name,
             email: values.user.email,
@@ -52,7 +56,7 @@ const CustomerForm = () => {
         });
     };
     return (
-        <div className="bg-backGround flex flex-col w-full h-auto justify-center items-center opacity-95">
+        <div className="bg-backGround flex flex-col w-full h-auto justify-center items-center">
             <div className="w-full text-center font-bold text-[#E3D5C8] text-[50px] font-DancingScript gap-10 mt-10 mb-10">CUSTOMER FORM</div>
             <Form
                 {...layout}

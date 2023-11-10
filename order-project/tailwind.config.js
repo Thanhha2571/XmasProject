@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'textColor': '#E3D3C4',
-        'backGround': '#1f4335',
+        'backGround': '#2C2C2C',
         'itemsBackground': '#808080'
       },
     },
@@ -17,7 +17,19 @@ module.exports = {
       "Changa": ["Changa"],
       "DancingScript": ["Dancing Script"],
       "Montserrat": ["Montserrat"],
-    }
+    },
+    screens: {
+      'mobileSmall': '320px',
+      // => @media (min-width: 320px) { ... }
+      'tablet': '768px',
+      // => @media (min-width: 768px) { ... }
+      'laptop': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'desktop': '1440px',
+      // => @media (min-width: 1280px) { ... }
+    },
+
   },
   plugins: [
     require('flowbite/plugin')

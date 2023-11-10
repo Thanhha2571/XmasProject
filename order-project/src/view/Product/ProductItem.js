@@ -43,12 +43,35 @@ const ProductItem = (props) => {
         localStorage.setItem('products', JSON.stringify(existingProducts));
     }, [id, orderName, quantity]);
     return (
-        <div className="bg-itemsBackground flex flex-row gap-8 w-full h-auto py-6 border border-[#103E3F] rounded-full ">
-            <img src={img} className="w-[250px] h-[250px] ml-10 rounded-full" />
-            <div className="flex flex-col gap-5 px-10">
-                <div className="text-5xl text-textColor font-DancingScript">{name}</div>
-                <div className="text-base text-textColor font-Montserrat">{description}</div>
-                <div className="flex gap-4">
+        <div className="bg-itemsBackground flex flex-row gap-8 w-full h-auto py-6 border border-[#103E3F] rounded-full 
+            mobileSmall:flex-col mobileSmall:border-none mobileSmall:justify-center mobileSmall:items-center mobileSmall:bg-backGround mobileSmall:rounded-none
+            laptop:flex-row laptop:bg-itemsBackground laptop:gap-8 laptop:w-full laptop:h-auto laptop:py-6 laptop:border laptop:border-itemsBackground laptop:rounded-full laptop:mb-3
+        ">
+            <img src={img} className="w-[400px] h-[400px] ml-10 rounded-full
+                mobileSmall:full mobileSmall:h-auto mobileSmall:rounded-none mobileSmall:ml-0
+                tablet:w-[500px]
+                laptop:w-[350px] laptop:h-[350px] laptop:ml-10 laptop:rounded-full
+                desktop:w-[400px] desktop:h-[400px]
+            " />
+            <div className="flex flex-col px-10 justify-between
+                mobileSmall:px-0 mobileSmall:justify-center mobileSmall:gap-5
+                laptop:px-10 laptop:justify-between
+            ">
+                <div className="flex flex-col gap-5" >
+                    <div className="text-[60px] text-textColor font-DancingScript
+                        mobileSmall:text-[30px]
+                        laptop:text-[40px]
+                        desktop:text-[60px]
+                    ">{name}</div>
+                    <div className="text-[22px] text-textColor font-Montserrat font-bol
+                        mobileSmall:text-base
+                        laptop:text-[15px]
+                        desktop:text-[22px]
+                    ">{description}</div>
+                </div>
+                <div className="flex gap-4
+                    mobileSmall:justify-center mobileSmall:items-center
+                ">
                     <button onClick={handleDecrease} className="bg-backGround text-textColor px-4 py-2 rounded">
                         -
                     </button>
