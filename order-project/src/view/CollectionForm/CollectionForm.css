@@ -1,4 +1,4 @@
-:where(.css-dev-only-do-not-override-2i2tap).ant-input-affix-wrapper {
+.css-dev-only-do-not-override-2i2tap.ant-input-affix-wrapper {
     position: relative;
     display: inline-flex;
     width: 100%;
@@ -16,7 +16,7 @@
     transition: all 0.2s;
 }
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-form-item .ant-form-item-label >label {
+.css-dev-only-do-not-override-2i2tap.ant-form-item .ant-form-item-label >label {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -27,10 +27,10 @@
     font-weight: bold;
 }
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-input-affix-wrapper:hover {
+.css-dev-only-do-not-override-2i2tap.ant-input-affix-wrapper:hover {
     border-color:#E3D3C4;
 }
-:where(.css-dev-only-do-not-override-2i2tap).ant-input-affix-wrapper >input.ant-input {
+.css-dev-only-do-not-override-2i2tap.ant-input-affix-wrapper >input.ant-input {
     padding: 0;
     font-size: inherit;
     border: none;
@@ -42,7 +42,7 @@
     font-weight: bold;
 }
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-row {
+.css-dev-only-do-not-override-2i2tap.ant-row {
     display: flex;
     flex-flow: row wrap;
     min-width: 0;
@@ -50,7 +50,7 @@
     gap: 8px;
 }
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-input-number-affix-wrapper {
+.css-dev-only-do-not-override-2i2tap.ant-input-number-affix-wrapper {
     position: relative;
     display: inline-flex;
     width: 90px;
@@ -68,7 +68,7 @@
     transition: all 0.2s;
 }
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-input-number .ant-input-number-input {
+.css-dev-only-do-not-override-2i2tap.ant-input-number .ant-input-number-input {
     box-sizing: border-box;
     margin: 0;
     color: #E3D3C4;
@@ -85,7 +85,7 @@
     transition: all 0.2s linear;
     appearance: textfield;
 }
-:where(.css-dev-only-do-not-override-2i2tap).ant-input-number .ant-input-number-input {
+.css-dev-only-do-not-override-2i2tap.ant-input-number .ant-input-number-input {
     box-sizing: border-box;
     margin: 0;
     padding: 4px 11px;
@@ -103,12 +103,12 @@
     transition: all 0.2s linear;
     appearance: textfield;
 }
-:where(.css-dev-only-do-not-override-2i2tap).ant-input-number-affix-wrapper:hover {
+.css-dev-only-do-not-override-2i2tap.ant-input-number-affix-wrapper:hover {
     border-color: #E3D3C4;
 }
 
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-btn-primary {
+.css-dev-only-do-not-override-2i2tap.ant-btn-primary {
     color: #E3D3C4;
     font-size: 20px;
     background-color: #808080;
@@ -116,7 +116,7 @@
     width: 100%;
 }
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-btn {
+.css-dev-only-do-not-override-2i2tap.ant-btn {
     font-size: 14px;
     height: 32px;
     /* padding: 15px 15px 15px 15px; */
@@ -126,11 +126,26 @@
     align-items: center;
 }
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
+.css-dev-only-do-not-override-2i2tap.ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
     color: #E3D3C4;
     background-color: #808080;
 }
 
-:where(.css-dev-only-do-not-override-2i2tap).ant-col-offset-8 {
+.css-dev-only-do-not-override-2i2tap.ant-col-offset-8 {
     margin-inline-start: 0;
+}
+
+.css-dev-only-do-not-override-2i2tap.ant-checkbox-wrapper {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #E3D3C4;
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+    display: inline-flex;
+    align-items: baseline;
+    cursor: pointer;
+
 }

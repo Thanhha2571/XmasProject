@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, Input, InputNumber } from 'antd';
+import { Button, Form, Input, InputNumber, Checkbox } from 'antd';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./CollectionForm.css"
@@ -25,6 +25,12 @@ const validateMessages = {
 
 const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
+    const [acceptedTerms, setAcceptedTerms] = useState(false);
+
+    const handleTermsChange = (e) => {
+        setAcceptedTerms(e.target.checked);
+    };
+
     const onFinish = async (values) => {
         console.log(values);
         // Retrieve 'products' value from localStorage
@@ -35,7 +41,11 @@ const CustomerForm = () => {
 
         // Update the state with the parsed value
         setStoredValue(parsedProducts);
-
+        if (!acceptedTerms) {
+            // Handle the case where terms are not accepted
+            console.log('Please accept the terms before submitting.');
+            return;
+        }
         // Log the parsed value
         console.log(parsedProducts);
 
@@ -78,7 +88,7 @@ const CustomerForm = () => {
                 <div className="
                     tablet:flex flex-row
                 ">
-                    
+
                 </div>
                 <Form.Item
                     hasFeedback
@@ -177,6 +187,20 @@ const CustomerForm = () => {
                     ]}
                 >
                     <Input />
+                </Form.Item>
+                <Form.Item
+                    name="agreement"
+                    valuePropName="checked"
+                    rules={[
+                        {
+                            validator: (_, value) =>
+                                value ? Promise.resolve() : Promise.reject(new Error('Should accept agreement')),
+                        },
+                    ]}
+                >
+                    <Checkbox>
+                        Accept all terms and conditions
+                    </Checkbox>
                 </Form.Item>
                 <Form.Item
                     wrapperCol={{
