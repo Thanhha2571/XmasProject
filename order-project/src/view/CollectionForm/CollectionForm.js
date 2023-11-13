@@ -41,7 +41,7 @@ const CustomerForm = () => {
 
         // Update the state with the parsed value
         setStoredValue(parsedProducts);
-        if (!acceptedTerms) {
+        if (!values.agreement) {
             // Handle the case where terms are not accepted
             console.log('Please accept the terms before submitting.');
             return;
