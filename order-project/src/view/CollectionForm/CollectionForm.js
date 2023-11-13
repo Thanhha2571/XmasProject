@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Form, Input, InputNumber } from 'antd';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./CollectionForm.css"
+import FrameFrom from '../../asset/Form.png';
 const layout = {
     labelCol: {
         span: 8,
@@ -13,10 +15,10 @@ const layout = {
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
-    required: '${label} is required!',
+    required: 'Please input your ${label}!',
     types: {
-        email: '${label} is not a valid email!',
-        number: '${label} is not a valid number!',
+        email: '${label} is not a valid!',
+        number: '${label} is not a valid!',
     },
 };
 /* eslint-enable no-template-curly-in-string */
@@ -37,9 +39,9 @@ const CustomerForm = () => {
         // Log the parsed value
         console.log(parsedProducts);
 
-        const pick_up_place  = localStorage.getItem('pick_up_place');
+        const pick_up_place = localStorage.getItem('pick_up_place');
         const pick_up_date = localStorage.getItem('pick_up_date');
-        const { data } = await axios.post("http://localhost:8080/api/order/orderForm", {
+        const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
             pick_up_date: pick_up_date,
             pick_up_place: pick_up_place,
             first_name: values.user.first_name,
@@ -56,28 +58,41 @@ const CustomerForm = () => {
         });
     };
     return (
-        <div className="bg-backGround flex flex-col w-full h-auto justify-center items-center">
-            <div className="w-full text-center font-bold text-[#E3D5C8] text-[50px] font-DancingScript gap-10 mt-10 mb-10">CUSTOMER FORM</div>
+        <div className="bg-backGround flex flex-col w-full h-auto justify-center items-center relative
+        mobileSmall:px-4 mobileSmall:gap-5
+        ">
+            <div className="w-full text-center font-bold text-[#E3D5C8] text-[50px] font-DancingScript gap-10 mt-10 mb-10 relative
+                mobileSmall:text-[30px]
+            ">CUSTOMER FORM</div>
             <Form
                 {...layout}
                 name="nest-messages"
                 onFinish={onFinish}
                 style={{
                     maxWidth: 600,
+                    color: '#E3D3C4',
+                    // position:"absolute"
                 }}
                 validateMessages={validateMessages}
             >
+                <div className="
+                    tablet:flex flex-row
+                ">
+                    
+                </div>
                 <Form.Item
                     hasFeedback
                     name={['user', 'first_name']}
                     label="First Name"
+                    style={{}}
                     rules={[
                         {
                             required: true,
+                            // message: 'Please input your first username!'
                         },
                     ]}
                 >
-                    <Input />
+                    <Input className='px-3 py-2' />
                 </Form.Item>
                 <Form.Item
                     hasFeedback
@@ -86,6 +101,7 @@ const CustomerForm = () => {
                     rules={[
                         {
                             required: true,
+                            // message: 'Please input your last username!'
                         },
                     ]}
                 >
@@ -99,10 +115,14 @@ const CustomerForm = () => {
                         {
                             type: 'email',
                             required: true,
+                            // message: 'Please input your email!'
                         },
                     ]}
                 >
-                    <Input />
+                    <Input style={{
+                        // border:"#E3D3C4",
+                        background: '#2C2C2C'
+                    }} />
                 </Form.Item>
                 <Form.Item
                     hasFeedback
@@ -112,6 +132,7 @@ const CustomerForm = () => {
                         {
                             type: 'number',
                             required: true,
+                            // message: 'Please input your phone number!'
                         },
                     ]}
                 >
@@ -125,6 +146,7 @@ const CustomerForm = () => {
                         {
                             type: 'number',
                             required: true,
+                            // message: 'Please input zip code!'
                         },
                     ]}
                 >
@@ -137,6 +159,7 @@ const CustomerForm = () => {
                     rules={[
                         {
                             required: true,
+                            // message: 'Please input your city!'
                         },
                     ]}
                 >
@@ -149,6 +172,7 @@ const CustomerForm = () => {
                     rules={[
                         {
                             required: true,
+                            // message: 'Please input your street!'
                         },
                     ]}
                 >
