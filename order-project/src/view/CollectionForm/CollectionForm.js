@@ -66,6 +66,7 @@ const CustomerForm = () => {
                 product_quantity: product.quantity
             }))
         });
+        localStorage.clear();
     };
     return (
         <div className="bg-backGround flex flex-col w-full h-auto justify-center items-center relative
