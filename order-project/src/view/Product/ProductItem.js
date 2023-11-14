@@ -42,6 +42,7 @@ const ProductItem = (props) => {
         // Store the updated products array back in localStorage
         localStorage.setItem('products', JSON.stringify(existingProducts));
     }, [id, orderName, quantity]);
+    
     return (
         <div className="bg-itemsBackground flex flex-row gap-8 w-full h-auto py-6 border border-[#103E3F] rounded-full 
             mobileSmall:flex-col mobileSmall:border-none mobileSmall:justify-center mobileSmall:items-center mobileSmall:bg-backGround mobileSmall:rounded-none

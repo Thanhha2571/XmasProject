@@ -1,52 +1,110 @@
-import React from 'react';
-import { Button, Form, Input, InputNumber, Checkbox } from 'antd';
-import { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
+import Modal from "react-modal"
 import "./CollectionForm.css"
-import FrameFrom from '../../asset/Form.png';
-const layout = {
-    labelCol: {
-        span: 8,
-    },
-    wrapperCol: {
-        span: 16,
-    },
-};
-
-/* eslint-disable no-template-curly-in-string */
-const validateMessages = {
-    required: 'Please input your ${label}!',
-    types: {
-        email: '${label} is not a valid!',
-        number: '${label} is not a valid!',
-    },
-};
-/* eslint-enable no-template-curly-in-string */
-
 const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
-    const [acceptedTerms, setAcceptedTerms] = useState(false);
-
-    const handleTermsChange = (e) => {
-        setAcceptedTerms(e.target.checked);
+    const [formData, setFormData] = useState({
+        user: {
+            first_name: '',
+            last_name: '',
+            email: '',
+            phone: '',
+            zip_code: '',
+            city: '',
+            street: '',
+        },
+        agreement: false,
+    });
+    const [boxAdd, setBoxAdd] = useState(false)
+    // useEffect(() => {
+    //     if (formData.user.first_name.length > 0) {
+    //         setFirstNameError(false);
+    //     }
+    //     if (formData.user.last_name.length > 0) {
+    //         setLastNameError(false);
+    //     }
+    //     if (formData.user.email.length > 0) {
+    //         setEmailError(false);
+    //     }
+    //     if (formData.user.phone.length > 0) {
+    //         setPhoneError(false);
+    //     }
+    //     if (formData.user.zip_code.length > 0) {
+    //         setZipError(false);
+    //     }
+    //     if (formData.user.city.length > 0) {
+    //         setCityError(false);
+    //     }
+    //     if (formData.user.street.length > 0) {
+    //         setStreetError(false);
+    //     }
+    // },[formData.user.first_name,formData.user.last_name,formData.user.email, formData.user.phone,formData.user.zip_code,formData.user.city,formData.user.street ])
+    // const [firstNameError, setFirstNameError] = useState(false);
+    // const [lastNameError, setLastNameError] = useState(false);
+    // const [emailError, setEmailError] = useState(false);
+    // const [phoneError, setPhoneError] = useState(false);
+    // const [zipError, setZipError] = useState(false);
+    // const [cityError, setCityError] = useState(false);
+    // const [streetError, setStreetError] = useState(false);
+    const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        if (name === 'agreement') {
+            setFormData((prevData) => ({
+                ...prevData,
+                [name]: checked,
+            }));
+        } else {
+            setFormData((prevData) => ({
+                ...prevData,
+                user: {
+                    ...prevData.user,
+                    [name]: type === 'checkbox' ? checked : value,
+                },
+            }));
+        }
     };
 
-    const onFinish = async (values) => {
-        console.log(values);
-        // Retrieve 'products' value from localStorage
-        const productsFromStorage = localStorage.getItem('products');
 
-        // Parse the retrieved value (assuming it's a JSON string)
-        const parsedProducts = productsFromStorage ? JSON.parse(productsFromStorage) : null;
-
-        // Update the state with the parsed value
-        setStoredValue(parsedProducts);
-        if (!values.agreement) {
-            // Handle the case where terms are not accepted
-            console.log('Please accept the terms before submitting.');
+    // const handelError = () => {
+    //     if (formData.user.first_name.length === 0) {
+    //         setFirstNameError(true);
+    //     }
+    //     if (formData.user.last_name.length === 0) {
+    //         setLastNameError(true);
+    //     }
+    //     if (formData.user.email.length === 0) {
+    //         setEmailError(true);
+    //     }
+    //     if (formData.user.phone.length === 0) {
+    //         setPhoneError(true);
+    //     }
+    //     if (formData.user.zip_code.length === 0) {
+    //         setZipError(true);
+    //     }
+    //     if (formData.user.city.length === 0) {
+    //         setCityError(true);
+    //     }
+    //     if (formData.user.street.length === 0) {
+    //         setStreetError(true);
+    //     }
+    // }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setBoxAdd(true)
+        if (!formData.agreement) {
+            // Handle the case when the agreement is not accepted
+            console.log('Please accept all terms and conditions.');
             return;
         }
-        // Log the parsed value
+        console.log('Form submitted:', formData);
+        const productsFromStorage = localStorage.getItem('products');
+
+        const parsedProducts = productsFromStorage ? JSON.parse(productsFromStorage) : null;
+
+        setStoredValue(parsedProducts);
+
         console.log(parsedProducts);
 
         const pick_up_place = localStorage.getItem('pick_up_place');
@@ -54,166 +112,193 @@ const CustomerForm = () => {
         const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
             pick_up_date: pick_up_date,
             pick_up_place: pick_up_place,
-            first_name: values.user.first_name,
-            last_name: values.user.last_name,
-            email: values.user.email,
-            phone_number: values.user.phone,
-            zip_code: values.user.zip_code,
-            city: values.user.city,
-            street: values.user.street,
+            first_name: formData.user.first_name,
+            last_name: formData.user.last_name,
+            email: formData.user.email,
+            phone_number: formData.user.phone,
+            zip_code: formData.user.zip_code,
+            city: formData.user.city,
+            street: formData.user.street,
             products: parsedProducts.map(product => ({
                 product_name: product.orderName,
                 product_quantity: product.quantity
             }))
         });
+        // console.log(data);
+        setFormData({
+            user: {
+                first_name: '',
+                last_name: '',
+                email: '',
+                phone: '',
+                zip_code: '',
+                city: '',
+                street: '',
+            },
+            agreement: false,
+        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 5000);
+
         localStorage.clear();
     };
     return (
-        <div className="bg-backGround flex flex-col w-full h-auto justify-center items-center relative
-        mobileSmall:px-4 mobileSmall:gap-5
+        <div className="bg-backGround flex flex-col w-full h-auto relative
+        mobileSmall:px-4 mobileSmall:gap-5 mobileSmall:justify-center mobileSmall:items-center
+        tablet:justify-start tablet:items-start tablet:w-full
+        laptop:justify-center laptop:items-center
         ">
-            <div className="w-full text-center font-bold text-[#E3D5C8] text-[50px] font-DancingScript gap-10 mt-10 mb-10 relative
+            <div className="w-full text-center font-bold text-[#E3D5C8] text-[50px] font-DancingScript gap-10 mt-10 relative
                 mobileSmall:text-[30px]
             ">CUSTOMER FORM</div>
-            <Form
-                {...layout}
-                name="nest-messages"
-                onFinish={onFinish}
-                style={{
-                    maxWidth: 600,
-                    color: '#E3D3C4',
-                    // position:"absolute"
-                }}
-                validateMessages={validateMessages}
+            <form
+                className="font-Montserrat flex flex-col justify-center items-center gap-5 w-full
+                laptop:max-w-[600px]"
+                onSubmit={handleSubmit}
             >
-                <div className="
-                    tablet:flex flex-row
+                <div className="flex justify-between w-full
+                    mobileSmall:flex-col mobileSmall:gap-5 mobileSmall:w-full   
+                    tablet:flex-row     
                 ">
-
+                    <div className="flex
+                        mobileSmall:flex-col mobileSmall:gap-2
+                        tablet:w-1/2
+                    ">
+                        <input
+                            type="text"
+                            id="first_name"
+                            name="first_name"
+                            value={formData.user.first_name}
+                            onChange={handleChange}
+                            required
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                            placeholder='First Name*'
+                        />
+                        {/* {firstNameError && <span className="text-red-600 text-sm">First name is required</span>} */}
+                    </div>
+                    <div className="flex
+                        mobileSmall:flex-col mobileSmall:gap-2
+                        tablet:w-1/2
+                    ">
+                        <input
+                            type="text"
+                            id="last_name"
+                            name="last_name"
+                            value={formData.user.last_name}
+                            onChange={handleChange}
+                            required
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                            placeholder='Last Name*'
+                        />
+                        {/* {lastNameError && <span className="text-red-600 text-sm">Last name is required</span>} */}
+                    </div>
                 </div>
-                <Form.Item
-                    hasFeedback
-                    name={['user', 'first_name']}
-                    label="First Name"
-                    style={{}}
-                    rules={[
-                        {
-                            required: true,
-                            // message: 'Please input your first username!'
-                        },
-                    ]}
+                <div className="flex
+                        mobileSmall:flex-col mobileSmall:gap-2 w-full">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.user.email}
+                        onChange={handleChange}
+                        required
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                        placeholder='Email address*'
+                    />
+                    {/* {emailError && <span className="text-red-600 text-sm">Email is required</span>} */}
+                </div>
+                <div className="flex
+                        mobileSmall:flex-col mobileSmall:gap-2 w-full">
+                    <input
+                        type="number"
+                        id="phone"
+                        name="phone"
+                        value={formData.user.phone}
+                        onChange={handleChange}
+                        required
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                        placeholder='Phone number*'
+                    />
+                    {/* {phoneError && <span className="text-red-600 text-sm">Phone number is required</span>} */}
+                </div>
+                <div className="flex justify-between w-full
+                    mobileSmall:flex-col mobileSmall:gap-5 mobileSmall:w-full
+                    tablet:flex-row ">
+                    <div className="flex
+                        mobileSmall:flex-col mobileSmall:gap-2 w-full
+                        tablet:w-1/2">
+                        <input
+                            type="number"
+                            id="zip_code"
+                            name="zip_code"
+                            value={formData.user.zip_code}
+                            onChange={handleChange}
+                            required
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                            placeholder='Zip code*'
+                        />
+                        {/* {zipError && <span className="text-red-600 text-sm">Zip code is required</span>} */}
+                    </div>
+                    <div className="flex
+                        mobileSmall:flex-col mobileSmall:gap-2 w-full
+                        tablet:w-1/2">
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            value={formData.user.city}
+                            onChange={handleChange}
+                            required
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                            placeholder='City*'
+                        />
+                        {/* {cityError && <span className="text-red-600 text-sm">Zip code is required</span>} */}
+                    </div>
+                </div>
+                <div className="flex
+                        mobileSmall:flex-col mobileSmall:gap-2 w-full
+                        ">
+                    <input
+                        type="text"
+                        id="street"
+                        name="street"
+                        value={formData.user.street}
+                        onChange={handleChange}
+                        required
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                        placeholder='Street*'
+                    />
+                    {/* {streetError && <span className="text-red-600 text-sm">Street is required</span>} */}
+                </div>
+                <div className='flex justify-start gap-2'>
+                    <input
+                        type="checkbox"
+                        id="agreement"
+                        name="agreement"
+                        checked={formData.agreement}
+                        onChange={handleChange}
+                        required
+                    />
+                    <label htmlFor="agreement" className="text-textColor font-Montserrat ">Accept all terms and conditions</label>
+                </div>
+                <Modal
+                    isOpen={boxAdd}
+                    onRequestClose={() => setBoxAdd(false)}
+                    overlayClassName="popup-overlay"
+                    className="popup-content"
                 >
-                    <Input className='px-3 py-2' />
-                </Form.Item>
-                <Form.Item
-                    hasFeedback
-                    name={['user', 'last_name']}
-                    label="Last Name"
-                    rules={[
-                        {
-                            required: true,
-                            // message: 'Please input your last username!'
-                        },
-                    ]}
-                >
-                    <Input />
-                </Form.Item>
-                <Form.Item
-                    hasFeedback
-                    name={['user', 'email']}
-                    label="Email"
-                    rules={[
-                        {
-                            type: 'email',
-                            required: true,
-                            // message: 'Please input your email!'
-                        },
-                    ]}
-                >
-                    <Input style={{
-                        // border:"#E3D3C4",
-                        background: '#2C2C2C'
-                    }} />
-                </Form.Item>
-                <Form.Item
-                    hasFeedback
-                    name={['user', 'phone']}
-                    label="Phone Number"
-                    rules={[
-                        {
-                            type: 'number',
-                            required: true,
-                            // message: 'Please input your phone number!'
-                        },
-                    ]}
-                >
-                    <InputNumber />
-                </Form.Item>
-                <Form.Item
-                    hasFeedback
-                    name={['user', 'zip_code']}
-                    label="Zip Code"
-                    rules={[
-                        {
-                            type: 'number',
-                            required: true,
-                            // message: 'Please input zip code!'
-                        },
-                    ]}
-                >
-                    <InputNumber />
-                </Form.Item>
-                <Form.Item
-                    hasFeedback
-                    name={['user', 'city']}
-                    label="City"
-                    rules={[
-                        {
-                            required: true,
-                            // message: 'Please input your city!'
-                        },
-                    ]}
-                >
-                    <Input />
-                </Form.Item>
-                <Form.Item
-                    hasFeedback
-                    name={['user', 'street']}
-                    label="Street"
-                    rules={[
-                        {
-                            required: true,
-                            // message: 'Please input your street!'
-                        },
-                    ]}
-                >
-                    <Input />
-                </Form.Item>
-                <Form.Item
-                    name="agreement"
-                    valuePropName="checked"
-                    rules={[
-                        {
-                            validator: (_, value) =>
-                                value ? Promise.resolve() : Promise.reject(new Error('Should accept agreement')),
-                        },
-                    ]}
-                >
-                    <Checkbox>
-                        Accept all terms and conditions
-                    </Checkbox>
-                </Form.Item>
-                <Form.Item
-                    wrapperCol={{
-                        ...layout.wrapperCol,
-                        offset: 8,
-                    }}
-                >
-                    <Button type="primary" htmlType="submit">
-                        Submit
-                    </Button>
-                </Form.Item>
-            </Form>
+                    <button onClick={() => setBoxAdd(false)} className="text-xl text-textColor w-7 h-7 ml-auto">x</button>
+                    <div className="flex flex-col gap-2 text-textColor text-base justify-center p-4">
+                        <span>Your order has been recored.</span>
+                        <span>We will contact you to check order again.</span>
+                        <span>Please pay attention to your phone.</span>
+                    </div>
+                </Modal>
+                <div className="w-full flex justify-center px-3 py-1.5 bg-itemsBackground text-textColor font-extrabold rounded-xl mb-6 cursor-pointer">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     )
 }
