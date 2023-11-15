@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import Modal from "react-modal"
+import { pickUpAddressList } from '../../asset/data/data';
 import "./CollectionForm.css"
 const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
@@ -18,6 +19,7 @@ const CustomerForm = () => {
         agreement: false,
     });
     const [boxAdd, setBoxAdd] = useState(false)
+    const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     // useEffect(() => {
     //     if (formData.user.first_name.length > 0) {
     //         setFirstNameError(false);
@@ -111,7 +113,7 @@ const CustomerForm = () => {
         const pick_up_date = localStorage.getItem('pick_up_date');
         const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
             pick_up_date: pick_up_date,
-            pick_up_place: pick_up_place,
+            pick_up_place: selectedPickupAddress,
             first_name: formData.user.first_name,
             last_name: formData.user.last_name,
             email: formData.user.email,
@@ -150,8 +152,8 @@ const CustomerForm = () => {
         laptop:justify-center laptop:items-center
         ">
             <div className="w-full text-center font-bold text-[#E3D5C8] text-[50px] font-DancingScript gap-10 mt-10 relative
-                mobileSmall:text-[30px]
-            ">CUSTOMER FORM</div>
+                mobileSmall:text-[35px]
+            ">Bestellformular</div>
             <form
                 className="font-Montserrat flex flex-col justify-center items-center gap-5 w-full
                 laptop:max-w-[600px]"
@@ -173,7 +175,7 @@ const CustomerForm = () => {
                             onChange={handleChange}
                             required
                             className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
-                            placeholder='First Name*'
+                            placeholder='Vorname*'
                         />
                         {/* {firstNameError && <span className="text-red-600 text-sm">First name is required</span>} */}
                     </div>
@@ -189,7 +191,7 @@ const CustomerForm = () => {
                             onChange={handleChange}
                             required
                             className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
-                            placeholder='Last Name*'
+                            placeholder='Nachname*'
                         />
                         {/* {lastNameError && <span className="text-red-600 text-sm">Last name is required</span>} */}
                     </div>
@@ -204,7 +206,7 @@ const CustomerForm = () => {
                         onChange={handleChange}
                         required
                         className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
-                        placeholder='Email address*'
+                        placeholder='E-Mail-Adresse*'
                     />
                     {/* {emailError && <span className="text-red-600 text-sm">Email is required</span>} */}
                 </div>
@@ -218,7 +220,7 @@ const CustomerForm = () => {
                         onChange={handleChange}
                         required
                         className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
-                        placeholder='Phone number*'
+                        placeholder='Telefon*'
                     />
                     {/* {phoneError && <span className="text-red-600 text-sm">Phone number is required</span>} */}
                 </div>
@@ -271,6 +273,28 @@ const CustomerForm = () => {
                     />
                     {/* {streetError && <span className="text-red-600 text-sm">Street is required</span>} */}
                 </div>
+                <div className="flex
+                    mobileSmall:flex-col mobileSmall:gap-2 w-full
+                    tablet:w-full"
+                >
+                    {/* <label htmlFor="pickupAddress" className="text-textColor font-Montserrat text-sm">Abholort*</label> */}
+                    <select
+                        id="pickupAddress"
+                        name="pickupAddress"
+                        value={selectedPickupAddress}
+                        onChange={(e) => setSelectedPickupAddress(e.target.value)}
+                        required
+                        placeholder='Adresse der Abholung*'
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                    >
+                        <option value="" disabled className='italic text-sm'>Adresse der Abholung*</option>
+                        {pickUpAddressList.map((address, index) => (
+                            <option className='text-sm text-textColor block' key={index} value={address.address}>
+                                {address.address}
+                            </option>
+                        ))}
+                    </select>
+                </div>
                 <div className='flex justify-start gap-2'>
                     <input
                         type="checkbox"
@@ -280,7 +304,7 @@ const CustomerForm = () => {
                         onChange={handleChange}
                         required
                     />
-                    <label htmlFor="agreement" className="text-textColor font-Montserrat ">Accept all terms and conditions</label>
+                    <label htmlFor="agreement" className="text-textColor font-Montserrat text-sm">Einwilligung zur Datenverwendung</label>
                 </div>
                 <Modal
                     isOpen={boxAdd}

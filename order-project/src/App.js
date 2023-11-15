@@ -28,7 +28,7 @@ function App() {
       {/* <Hero /> */}
       <TextIntro />
       <Product />
-      <PickUp />
+      {/* <PickUp /> */}
       <CustomerForm />
       {/* </div> */}
     </div>
