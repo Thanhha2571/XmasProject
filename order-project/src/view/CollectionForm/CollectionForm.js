@@ -3,6 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import Modal from "react-modal"
 import { pickUpAddressList } from '../../asset/data/data';
+import { pickUpTime } from '../../asset/data/data';
 import "./CollectionForm.css"
 const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
@@ -20,6 +21,7 @@ const CustomerForm = () => {
     });
     const [boxAdd, setBoxAdd] = useState(false)
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
+    const [selectedPickupTime, setSelectedPickupTime] = useState('');
     // useEffect(() => {
     //     if (formData.user.first_name.length > 0) {
     //         setFirstNameError(false);
@@ -105,14 +107,16 @@ const CustomerForm = () => {
 
         const parsedProducts = productsFromStorage ? JSON.parse(productsFromStorage) : null;
 
-        setStoredValue(parsedProducts);
+        const orderList = parsedProducts.filter((product) => product.quantity > 0);
+        // console.log(orderList);
+        setStoredValue(orderList);
 
-        console.log(parsedProducts);
+        // console.log(parsedProducts);
 
-        const pick_up_place = localStorage.getItem('pick_up_place');
-        const pick_up_date = localStorage.getItem('pick_up_date');
+        // const pick_up_place = localStorage.getItem('pick_up_place');
+        // const pick_up_date = localStorage.getItem('pick_up_date');
         const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
-            pick_up_date: pick_up_date,
+            pick_up_date: selectedPickupTime,
             pick_up_place: selectedPickupAddress,
             first_name: formData.user.first_name,
             last_name: formData.user.last_name,
@@ -121,7 +125,7 @@ const CustomerForm = () => {
             zip_code: formData.user.zip_code,
             city: formData.user.city,
             street: formData.user.street,
-            products: parsedProducts.map(product => ({
+            products: orderList.map(product => ({
                 product_name: product.orderName,
                 product_quantity: product.quantity
             }))
@@ -174,7 +178,7 @@ const CustomerForm = () => {
                             value={formData.user.first_name}
                             onChange={handleChange}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-lg focus:border-textColor focus:border-4"
                             placeholder='Vorname*'
                         />
                         {/* {firstNameError && <span className="text-red-600 text-sm">First name is required</span>} */}
@@ -190,7 +194,7 @@ const CustomerForm = () => {
                             value={formData.user.last_name}
                             onChange={handleChange}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-lg focus:border-textColor focus:border-4"
                             placeholder='Nachname*'
                         />
                         {/* {lastNameError && <span className="text-red-600 text-sm">Last name is required</span>} */}
@@ -205,7 +209,7 @@ const CustomerForm = () => {
                         value={formData.user.email}
                         onChange={handleChange}
                         required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
                         placeholder='E-Mail-Adresse*'
                     />
                     {/* {emailError && <span className="text-red-600 text-sm">Email is required</span>} */}
@@ -219,7 +223,7 @@ const CustomerForm = () => {
                         value={formData.user.phone}
                         onChange={handleChange}
                         required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
                         placeholder='Telefon*'
                     />
                     {/* {phoneError && <span className="text-red-600 text-sm">Phone number is required</span>} */}
@@ -237,7 +241,7 @@ const CustomerForm = () => {
                             value={formData.user.zip_code}
                             onChange={handleChange}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
                             placeholder='Zip code*'
                         />
                         {/* {zipError && <span className="text-red-600 text-sm">Zip code is required</span>} */}
@@ -252,7 +256,7 @@ const CustomerForm = () => {
                             value={formData.user.city}
                             onChange={handleChange}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
                             placeholder='City*'
                         />
                         {/* {cityError && <span className="text-red-600 text-sm">Zip code is required</span>} */}
@@ -268,33 +272,59 @@ const CustomerForm = () => {
                         value={formData.user.street}
                         onChange={handleChange}
                         required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
                         placeholder='Street*'
                     />
                     {/* {streetError && <span className="text-red-600 text-sm">Street is required</span>} */}
                 </div>
-                <div className="flex
+                <div className="flex justify-between w-full
+                    mobileSmall:flex-col mobileSmall:gap-5 mobileSmall:w-full   
+                    tablet:flex-row">
+                    <div className="flex
                     mobileSmall:flex-col mobileSmall:gap-2 w-full
-                    tablet:w-full"
-                >
-                    {/* <label htmlFor="pickupAddress" className="text-textColor font-Montserrat text-sm">Abholort*</label> */}
-                    <select
-                        id="pickupAddress"
-                        name="pickupAddress"
-                        value={selectedPickupAddress}
-                        onChange={(e) => setSelectedPickupAddress(e.target.value)}
-                        required
-                        placeholder='Adresse der Abholung*'
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-xl focus:border-textColor focus:border-4"
+                    tablet:w-1/2"
                     >
-                        <option value="" disabled className='italic text-sm'>Adresse der Abholung*</option>
-                        {pickUpAddressList.map((address, index) => (
-                            <option className='text-sm text-textColor block' key={index} value={address.address}>
-                                {address.address}
-                            </option>
-                        ))}
-                    </select>
+                        {/* <label htmlFor="pickupAddress" className="text-textColor font-Montserrat text-sm">Abholort*</label> */}
+                        <select
+                            id="pickupAddress"
+                            name="pickupAddress"
+                            value={selectedPickupAddress}
+                            onChange={(e) => setSelectedPickupAddress(e.target.value)}
+                            required
+                            placeholder='Adresse der Abholung*'
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                        >
+                            <option value="" disabled className='italic text-sm'>Adresse der Abholung*</option>
+                            {pickUpAddressList.map((address, index) => (
+                                <option className='text-sm text-textColor block' key={index} value={address.address}>
+                                    {address.address}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="flex
+                    mobileSmall:flex-col mobileSmall:gap-2 w-full
+                    tablet:w-1/2"
+                    >
+                        <select
+                            id="pickupTime"
+                            name="pickupTime"
+                            value={selectedPickupTime}
+                            onChange={(e) => setSelectedPickupTime(e.target.value)}
+                            required
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                        >
+                            <option value="" disabled className='italic text-sm'>Uhrzeit der Abholung*</option>
+                            {pickUpTime.map((item, index) => (
+                                <option className='text-sm text-textColor block' key={index} value={item.time}>
+                                    {item.time}
+                                </option>
+                            ))}
+                        </select>
+                        <label htmlFor="pickupTime" className="text-textColor font-Montserrat text-sm italic">Nur am 24.12 zwischen 12.00 - 15.00 Uhr</label>
+                    </div>
                 </div>
+
                 <div className='flex justify-start gap-2'>
                     <input
                         type="checkbox"
@@ -319,7 +349,7 @@ const CustomerForm = () => {
                         <span>Please pay attention to your phone.</span>
                     </div>
                 </Modal>
-                <div className="w-full flex justify-center px-3 py-1.5 bg-itemsBackground text-textColor font-extrabold rounded-xl mb-6 cursor-pointer">
+                <div className="w-full flex justify-center px-3 py-1.5 bg-itemsBackground text-textColor font-extrabold rounded-md mb-6 cursor-pointer">
                     <button type="submit">Submit</button>
                 </div>
             </form>
