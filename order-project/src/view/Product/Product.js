@@ -35,7 +35,7 @@ const Product = (props) => {
         {
             id: 5,
             img: Product5,
-            name: "Merry Shushi Christmas",
+            name: "Merry Sushi Christmas",
             description: "Build an Easter display – Assemble the 287 pieces to create a scene with 2 bunnies, 5 Easter eggs and 3 tulips, with customization tips included in the building instructions",
         },
     ];
@@ -65,7 +65,7 @@ const Product = (props) => {
                 />)}
             <img src={Santa} className="w-full h-36
                 mobileSmall:h-20
-                laptop:h-28
+                laptop:h-32
                 desktop:h-36
             " />
         </div>

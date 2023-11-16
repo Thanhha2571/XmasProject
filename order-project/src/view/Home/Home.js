@@ -18,7 +18,8 @@ const Home = () => {
 
   return (
     <section className="home section font-DancingScript" id='home'>
-      <h1 className="home__title">MERRY CHRISTMAS</h1>
+      {/* <img src='https://ccu.lieferbude.de/static/img/logo_white.4185c536c1cb.png' className='absolute w-16 h-32 top-0 right-0' /> */}
+      <h1 className="home__title">CôCô wünscht euch frohe Weihnachten</h1>
       <img src={HomeMoon} alt="home background" className="home__moon parallax" data-rellax-speed="-15" />
       <img src={HomeSanta} alt="home trineo" className="home__trineo parallax" data-rellax-speed="-2" />
       <img src={HomeMoutain3} alt="home mountain" className="home__mountain-3 parallax" data-rellax-speed="-8" />

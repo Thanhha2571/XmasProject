@@ -150,7 +150,7 @@ const CustomerForm = () => {
         localStorage.clear();
     };
     return (
-        <div className="bg-backGround flex flex-col w-full h-auto relative
+        <div className="bg-backGround opacity-95 flex flex-col w-full h-auto relative
         mobileSmall:px-4 mobileSmall:gap-5 mobileSmall:justify-center mobileSmall:items-center
         tablet:justify-start tablet:items-start tablet:w-full
         laptop:justify-center laptop:items-center
@@ -325,7 +325,7 @@ const CustomerForm = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-start gap-2'>
+                <div className='flex justify-start gap-2 w-full'>
                     <input
                         type="checkbox"
                         id="agreement"
@@ -336,6 +336,15 @@ const CustomerForm = () => {
                     />
                     <label htmlFor="agreement" className="text-textColor font-Montserrat text-sm">Einwilligung zur Datenverwendung</label>
                 </div>
+
+                <div className="flex
+                    mobileSmall:flex-col mobileSmall:gap-2 w-full
+                    tablet:w-full">
+                        <p className='italic text-textColor text-sm leading-8'>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). 
+                        Sie können diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an <span className='underline font-extrabold'>info@jaegerundlustig.de</span>
+                        . Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt. Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</p>
+                        <p className="italic text-textColor text-sm leading-8">Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung</p>
+                    </div>
                 <Modal
                     isOpen={boxAdd}
                     onRequestClose={() => setBoxAdd(false)}
@@ -349,8 +358,8 @@ const CustomerForm = () => {
                         <span>Please pay attention to your phone.</span>
                     </div>
                 </Modal>
-                <div className="w-full flex justify-center px-3 py-1.5 bg-itemsBackground text-textColor font-extrabold rounded-md mb-6 cursor-pointer">
-                    <button type="submit">Submit</button>
+                <div className="w-full flex justify-center px-3 py-4 bg-itemsBackground text-textColor font-extrabold rounded-md mb-6 cursor-pointer">
+                    <button type="submit">Absenden</button>
                 </div>
             </form>
         </div>
