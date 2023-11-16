@@ -4,7 +4,9 @@ import axios from 'axios';
 import Modal from "react-modal"
 import { pickUpAddressList } from '../../asset/data/data';
 import { pickUpTime } from '../../asset/data/data';
+import { pickUpQuantity } from '../../asset/data/data';
 import "./CollectionForm.css"
+
 const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
     const [formData, setFormData] = useState({
@@ -22,6 +24,7 @@ const CustomerForm = () => {
     const [boxAdd, setBoxAdd] = useState(false)
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     const [selectedPickupTime, setSelectedPickupTime] = useState('');
+    const [selectedPickupQuantity, setselectedPickupQuantity] = useState('');
     // useEffect(() => {
     //     if (formData.user.first_name.length > 0) {
     //         setFirstNameError(false);
@@ -102,14 +105,14 @@ const CustomerForm = () => {
             console.log('Please accept all terms and conditions.');
             return;
         }
-        console.log('Form submitted:', formData);
-        const productsFromStorage = localStorage.getItem('products');
+        // console.log('Form submitted:', formData);
+        // const productsFromStorage = localStorage.getItem('products');
 
-        const parsedProducts = productsFromStorage ? JSON.parse(productsFromStorage) : null;
+        // const parsedProducts = productsFromStorage ? JSON.parse(productsFromStorage) : null;
 
-        const orderList = parsedProducts.filter((product) => product.quantity > 0);
+        // const orderList = parsedProducts.filter((product) => product.quantity > 0);
         // console.log(orderList);
-        setStoredValue(orderList);
+        // setStoredValue(orderList);
 
         // console.log(parsedProducts);
 
@@ -125,10 +128,10 @@ const CustomerForm = () => {
             zip_code: formData.user.zip_code,
             city: formData.user.city,
             street: formData.user.street,
-            products: orderList.map(product => ({
-                product_name: product.orderName,
-                product_quantity: product.quantity
-            }))
+            products: [{
+                product_name: "Gans",
+                product_quantity: selectedPickupQuantity
+            }]
         });
         // console.log(data);
         setFormData({
@@ -147,7 +150,7 @@ const CustomerForm = () => {
             window.location.reload();
         }, 2000);
 
-        localStorage.clear();
+        // localStorage.clear();
     };
     return (
         <div className="bg-backGround opacity-95 flex flex-col w-full h-auto relative
@@ -155,9 +158,13 @@ const CustomerForm = () => {
         tablet:justify-start tablet:items-start tablet:w-full
         laptop:justify-center laptop:items-center
         ">
-            <div className="w-full text-center font-bold text-[#E3D5C8] text-[50px] font-DancingScript gap-10 mt-10 relative
+            <div className="w-full text-center font-bold text-textTitle text-[50px] font-DancingScript gap-10 mt-10 relative
                 mobileSmall:text-[35px]
             ">Bestellformular</div>
+            <div className="w-full text-center font-bold text-textWarning font-Montserrat relative italic
+                mobileSmall:text-[15px]
+            ">Bitte bestellen Sie Ihr Gänsepaket spätestens 2 Tage vor Abholtermin. Letze Bestellannahme ist am 21.12.2023</div>
+            <div></div>
             <form
                 className="font-Montserrat flex flex-col justify-center items-center gap-5 w-full
                 laptop:max-w-[600px]"
@@ -277,6 +284,26 @@ const CustomerForm = () => {
                     />
                     {/* {streetError && <span className="text-red-600 text-sm">Street is required</span>} */}
                 </div>
+                <div className="flex
+                    mobileSmall:flex-col mobileSmall:gap-2 w-full
+                    tablet:w-1/2"
+                >
+                    <select
+                        id="pickupQuantity"
+                        name="pickupQuantity"
+                        value={selectedPickupQuantity}
+                        onChange={(e) => setselectedPickupQuantity(e.target.value)}
+                        required
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                    >
+                        <option value="" disabled className='italic text-sm'>Anzahl der Gänsepakete*</option>
+                        {pickUpQuantity.map((item, index) => (
+                            <option className='text-sm text-textColor block' key={index} value={item.quantity}>
+                                {item.quantity}
+                            </option>
+                        ))}
+                    </select>
+                </div>
                 <div className="flex justify-between w-full
                     mobileSmall:flex-col mobileSmall:gap-5 mobileSmall:w-full   
                     tablet:flex-row">
@@ -340,11 +367,11 @@ const CustomerForm = () => {
                 <div className="flex
                     mobileSmall:flex-col mobileSmall:gap-2 w-full
                     tablet:w-full">
-                        <p className='italic text-textColor text-sm leading-8'>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). 
+                    <p className='italic text-textColor text-sm leading-8'>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
                         Sie können diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an <span className='underline font-extrabold'>info@jaegerundlustig.de</span>
                         . Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt. Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</p>
-                        <p className="italic text-textColor text-sm leading-8">Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung</p>
-                    </div>
+                    <p className="italic text-textColor text-sm leading-8">Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung</p>
+                </div>
                 <Modal
                     isOpen={boxAdd}
                     onRequestClose={() => setBoxAdd(false)}

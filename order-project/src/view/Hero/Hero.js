@@ -1,10 +1,10 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import Hero1 from "../../asset/Hero1.jpg";
-import Hero2 from "../../asset/Hero2.jpg";
-import Hero3 from "../../asset/Hero3.jpg";
-import Hero4 from "../../asset/Hero4.jpg";
-
+import Hero1 from "../../asset/cocopost1.jpg";
+import Hero2 from "../../asset/cocopost3.jpg";
+import Hero3 from "../../asset/cocopost4.jpg";
+import Hero4 from "../../asset/cocopost5.jpg";
+import Hero5 from "../../asset/cocopost7.jpg";
 const contentStyle = {
     height: '100%',
     color: '#fff',
@@ -18,7 +18,7 @@ const Hero = () => (
         <div>
             <h3 style={contentStyle}>
                 <img className='w-full h-[600px] 
-                mobileSmall:h-[400px]
+                mobileSmall:h-auto
                 laptop:h-[500px]
                 desktop:h-[650px]' 
                 src={Hero1} 
@@ -28,7 +28,7 @@ const Hero = () => (
         <div>
             <h3 style={contentStyle}>
                 <img className='w-full h-[600px] 
-                mobileSmall:h-[400px]
+                mobileSmall:h-auto
                 laptop:h-[500px]
                 desktop:h-[650px]'
                  src={Hero2} />
@@ -37,7 +37,7 @@ const Hero = () => (
         <div>
             <h3 style={contentStyle}>
                 <img className='w-full h-[600px] 
-                mobileSmall:h-[400px]
+                mobileSmall:h-auto
                 laptop:h-[500px]
                 desktop:h-[650px]' 
                 src={Hero3} />
@@ -46,10 +46,20 @@ const Hero = () => (
         <div>
             <h3 style={contentStyle}>
                 <img className='w-full h-[600px] 
-                mobileSmall:h-[400px]
+                mobileSmall:h-auto
                 laptop:h-[500px]
                 desktop:h-[650px]' 
                 src={Hero4} />
+            </h3>
+        </div>
+        <div>
+            <h3 style={contentStyle}>
+                <img className='w-full h-[600px] 
+                mobileSmall:h-auto
+                laptop:h-[500px]
+                desktop:h-[650px]' 
+                src={Hero5} 
+                />
             </h3>
         </div>
     </Carousel>

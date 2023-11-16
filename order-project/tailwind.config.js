@@ -8,8 +8,10 @@ module.exports = {
     extend: {
       colors: {
         'textColor': '#E3D3C4',
-        'backGround': '#2C2C2C',
-        'itemsBackground': '#808080'
+        'backGround': '#1f4335',
+        'itemsBackground': '#808080',
+        'textWarning': '#d05757',
+        'textTitle': '#fcd451'
       },
     },
     fontFamily: {
