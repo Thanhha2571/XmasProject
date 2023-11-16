@@ -9,6 +9,7 @@ import MediumSnow from "./asset/mediumSnow.png";
 import SmallSnow from "./asset/smallSnow.png";
 import Home from "./view/Home/Home";
 import "./theme.css"
+import "./App.css"
 function App() {
   // const [quantity, setQuantity] = useState(0)
   // const [orderName, setOrderName] = useState("")
@@ -17,6 +18,16 @@ function App() {
   return (
     // <div className="flex flex-col w-full h-auto justify-center items-center">
     <div className="bg-backGround flex flex-col relative w-full overflow-y-scroll">
+      <span className="fusion-imageframe imageframe-none imageframe-1 hover-type-none pulsate 
+      right-4 top-4
+        mobileSmall:right-6 mobileSmall:top-6
+        tablet:right-16 tablet:top-16
+      ">
+        <img src="https://ccu.lieferbude.de/static/img/logo_white.4185c536c1cb.png" className="w-16 h-32
+          mobileSmall:w-16 mobileSmall:h-32
+          tablet:w-32 tablet:h-64
+        "/>
+      </span>
       < Home />
       <div className="illustration">
         <div className="i-large"></div>

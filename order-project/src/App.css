@@ -1,1 +1,41 @@
+.fusion-sticky-container .fusion-imageframe {
+    transition: max-width .1s ease-in-out;
+    /* transition-behavior: normal; */
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: max-width;
+}
 
+.pulsate {
+    animation: 4s linear infinite pulse;
+}
+
+.fusion-imageframe {
+    position: fixed;
+    z-index: 20;
+    overflow: hidden;
+    vertical-align: middle;
+    /* max-width: var(--awb-max-width); */
+    line-height: 1;
+    /* filter: var(--awb-filter);
+    transition: var(--awb-filter-transition); */
+
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
+    }
+
+    50% {
+        -webkit-transform: scale(.7);
+        transform: scale(.7);
+    }
+
+    100% {
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
+    }
+}
