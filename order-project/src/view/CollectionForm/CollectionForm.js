@@ -145,7 +145,7 @@ const CustomerForm = () => {
         });
         setTimeout(() => {
             window.location.reload();
-        }, 5000);
+        }, 2000);
 
         localStorage.clear();
     };
