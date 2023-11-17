@@ -25,10 +25,10 @@ function App() {
         tablet:right-10 tablet:top-10
       ">
         <img src="https://ccu.lieferbude.de/static/img/logo_white.4185c536c1cb.png" className="w-16 h-32
-          mobileSmall:w-16 mobileSmall:h-32
-          tablet:w-24 tablet:h-48
-          desktop:w-32 desktop:h-64
-          desktopLarge:w-44 desktopLarge:h-80
+          mobileSmall:w-16 mobileSmall:h-24
+          tablet:w-24 tablet:h-36
+          desktop:w-32 desktop:h-56
+          desktopLarge:w-44 desktopLarge:h-76
         "/>
       </span>
       < Home />
