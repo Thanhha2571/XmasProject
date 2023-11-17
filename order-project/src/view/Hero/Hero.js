@@ -30,6 +30,15 @@ const Hero = () => (
                 mobileSmall:h-auto
                 laptop:h-auto
                 desktop:h-auto'
+                    src={isDesktop ? Hero3Rectangle : Hero3} />
+            </h3>
+        </div>
+        <div>
+            <h3 style={contentStyle}>
+                <img className='w-full h-auto
+                mobileSmall:h-auto
+                laptop:h-auto
+                desktop:h-auto'
                     src={isDesktop ? Hero1Rectangle : Hero1}
                 />
             </h3>
@@ -42,15 +51,6 @@ const Hero = () => (
                 desktop:h-auto'
                     src={isDesktop ? Hero2Rectangle : Hero2}
                 />
-            </h3>
-        </div>
-        <div>
-            <h3 style={contentStyle}>
-                <img className='w-full h-auto
-                mobileSmall:h-auto
-                laptop:h-auto
-                desktop:h-auto'
-                    src={isDesktop ? Hero3Rectangle : Hero3} />
             </h3>
         </div>
         <div>

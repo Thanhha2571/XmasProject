@@ -125,9 +125,6 @@ const CustomerForm = () => {
             last_name: formData.user.last_name,
             email: formData.user.email,
             phone_number: formData.user.phone,
-            zip_code: formData.user.zip_code,
-            city: formData.user.city,
-            street: formData.user.street,
             products: [{
                 product_name: "Gans",
                 product_quantity: selectedPickupQuantity
@@ -140,9 +137,6 @@ const CustomerForm = () => {
                 last_name: '',
                 email: '',
                 phone: '',
-                zip_code: '',
-                city: '',
-                street: '',
             },
             agreement: false,
         });
@@ -260,64 +254,6 @@ const CustomerForm = () => {
                         placeholder='Telefon*'
                     />
                     {/* {phoneError && <span className="text-red-600 text-sm">Phone number is required</span>} */}
-                </div>
-                <div className="flex justify-between w-full
-                    mobileSmall:flex-col mobileSmall:gap-5 mobileSmall:w-full
-                    tablet:flex-row ">
-                    <div className="flex
-                        mobileSmall:flex-col mobileSmall:gap-2 w-full
-                        tablet:w-1/2">
-                        <input
-                            type="number"
-                            id="zip_code"
-                            name="zip_code"
-                            value={formData.user.zip_code}
-                            onChange={handleChange}
-                            required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
-                            desktop:placeholder:text-xl desktop:text-xl
-                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
-                            "
-                            placeholder='Zip code*'
-                        />
-                        {/* {zipError && <span className="text-red-600 text-sm">Zip code is required</span>} */}
-                    </div>
-                    <div className="flex
-                        mobileSmall:flex-col mobileSmall:gap-2 w-full
-                        tablet:w-1/2">
-                        <input
-                            type="text"
-                            id="city"
-                            name="city"
-                            value={formData.user.city}
-                            onChange={handleChange}
-                            required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
-                            desktop:placeholder:text-xl desktop:text-xl
-                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
-                            "
-                            placeholder='City*'
-                        />
-                        {/* {cityError && <span className="text-red-600 text-sm">Zip code is required</span>} */}
-                    </div>
-                </div>
-                <div className="flex
-                        mobileSmall:flex-col mobileSmall:gap-2 w-full
-                        ">
-                    <input
-                        type="text"
-                        id="street"
-                        name="street"
-                        value={formData.user.street}
-                        onChange={handleChange}
-                        required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
-                        desktop:placeholder:text-xl desktop:text-xl
-                        desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
-                        "
-                        placeholder='Street*'
-                    />
-                    {/* {streetError && <span className="text-red-600 text-sm">Street is required</span>} */}
                 </div>
                 <div className="flex
                     mobileSmall:flex-col mobileSmall:gap-2 w-full
