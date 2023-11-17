@@ -5,12 +5,13 @@ import ChefIcon from "../../asset/chefIcon.png"
 import SauceIcon from "../../asset/sauce.png"
 import FireIcon from "../../asset/fireIcon.png"
 const ProductItem = (props) => {
-    const { img } = props;
+    const { img,imgRectangle } = props;
+    const isDesktop = window.innerWidth > 1024;
     return (
         <div className="flex flex-col gap-3 w-full h-auto py-6
 
         ">
-            <img src={img} className="w-full h-auto
+            <img src={isDesktop ? imgRectangle : img} className="w-full h-auto
                 mobileSmall:w-full mobileSmall:h-auto
             " />
             <div className="flex flex-col justify-center items-center gap-3

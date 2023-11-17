@@ -1,5 +1,6 @@
 import ProductItem from "./ProductItem";
 import Product1 from "../../asset/cocopost6.jpg";
+import Product1Rectangle from "../../asset/6.png"
 import Product2 from "../../asset/Shushi1.jpg";
 import Product3 from "../../asset/Shushi2.jpg";
 import Product4 from "../../asset/Shushi3.jpg";
@@ -11,6 +12,7 @@ const Product = (props) => {
         {
             id: 1,
             img: Product1,
+            imgRectangle: Product1Rectangle,
             // name: "Martini Hafermastgans",
             // description: "Discover the first-ever museum to join the Modular Buildings collection. Home to an array of brick-built exhibits it features dual skylights that allow light to permeate the building’s 2 levels, illuminating the towering brachiosaurus skeleton and collection of treasures within.",
         },
@@ -51,6 +53,7 @@ const Product = (props) => {
                     key={index}
                     id={product.id}
                     img={product.img}
+                    imgRectangle={product.imgRectangle}
                 />)}
             <img src={Santa} className="w-full h-36
                 mobileSmall:h-20
