@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import MediumSnow from "./asset/mediumSnow.png";
 import SmallSnow from "./asset/smallSnow.png";
 import Home from "./view/Home/Home";
+import Footer from "./view/Footer/Footer";
 import "./theme.css"
 import "./App.css"
 function App() {
@@ -43,6 +44,7 @@ function App() {
       <Product />
       {/* <PickUp /> */}
       <CustomerForm />
+      <Footer />
       {/* </div> */}
     </div>
   );

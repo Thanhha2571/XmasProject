@@ -11,12 +11,22 @@ module.exports = {
         'backGround': '#1f4335',
         'itemsBackground': '#808080',
         'textWarning': '#d05757',
-        'textTitle': '#fcd451'
+        'textTitle': '#fcd451',
+        'footerBackground': '#E3D3C4',
+        'footerText': '#1f4335',
+        'footerTitle': '#525252',
       },
+      // colors: {
+      //   'textColor': '#ffffff',
+      //   'backGround': '#6e0e14',
+      //   'itemsBackground': '#808080',
+      //   'textWarning': '#d05757',
+      //   'textTitle': '#fcd451'
+      // },
     },
     fontFamily: {
       "ShadowsIntoLight": ["Shadows Into Light"],
-      "Changa": ["Changa"],
+      "Changa": ["Roboto"],
       "DancingScript": ["Dancing Script"],
       "Montserrat": ["Montserrat"],
     },

@@ -442,7 +442,7 @@ const CustomerForm = () => {
                     </div>
                 </Modal>
                 <div className="w-full flex justify-center px-3 py-4 bg-itemsBackground text-textColor font-extrabold hover:border-4 hover:bg-neutral-600 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
-                    <button className="
+                    <button className="w-full h-full
                     desktop:text-xl
                     desktopLarge:text-3xl" type="submit">Absenden</button>
                 </div>
