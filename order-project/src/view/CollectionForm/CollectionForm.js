@@ -155,19 +155,32 @@ const CustomerForm = () => {
     return (
         <div className="bg-backGround opacity-95 flex flex-col w-full h-auto relative
         mobileSmall:px-4 mobileSmall:gap-5 mobileSmall:justify-center mobileSmall:items-center
-        tablet:justify-start tablet:items-start tablet:w-full
+        tablet:justify-start tablet:items-start tablet:w-full tablet:px-12
         laptop:justify-center laptop:items-center
         ">
             <div className="w-full text-center font-bold text-textTitle text-[50px] font-DancingScript gap-10 mt-10 relative
-                mobileSmall:text-[35px]
+        mobileSmall:text-[35px]
+        mobileLarge:text-[45px]
+        tablet:text-[60px]
+        desktop:text-[70px] desktop:gap-4
+        desktopLarge:text-[100px] desktopLarge:gap-10
+
             ">Bestellformular</div>
             <div className="w-full text-center font-bold text-textWarning font-Montserrat relative italic
                 mobileSmall:text-[15px]
+                tablet:text-[20px]
+                laptop:text-[25px]
+                desktop:text-[30px]
+                desktopLarge:text-[35px]
             ">Bitte bestellen Sie Ihr Gänsepaket spätestens 2 Tage vor Abholtermin. Letze Bestellannahme ist am 21.12.2023</div>
             <div></div>
             <form
                 className="font-Montserrat flex flex-col justify-center items-center gap-5 w-full
-                laptop:max-w-[600px]"
+                tablet:px-8 tablet:gap-6
+                laptop:px-12 laptop:gap-8 laptop:max-w-[800px]
+                desktop:px-14 desktop:gap-10 desktop:max-w-[1000px]
+                desktopLarge:px-18 desktopLarge:gap-12 desktopLarge:max-w-[1400px]
+                "
                 onSubmit={handleSubmit}
             >
                 <div className="flex justify-between w-full
@@ -185,7 +198,10 @@ const CustomerForm = () => {
                             value={formData.user.first_name}
                             onChange={handleChange}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-lg focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-lg focus:border-textColor focus:border-4
+                            desktop:placeholder:text-xl desktop:text-xl
+                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                            "
                             placeholder='Vorname*'
                         />
                         {/* {firstNameError && <span className="text-red-600 text-sm">First name is required</span>} */}
@@ -201,8 +217,12 @@ const CustomerForm = () => {
                             value={formData.user.last_name}
                             onChange={handleChange}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-lg focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-lg focus:border-textColor focus:border-4
+                            desktop:placeholder:text-xl desktop:text-xl
+                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                            "
                             placeholder='Nachname*'
+
                         />
                         {/* {lastNameError && <span className="text-red-600 text-sm">Last name is required</span>} */}
                     </div>
@@ -216,7 +236,10 @@ const CustomerForm = () => {
                         value={formData.user.email}
                         onChange={handleChange}
                         required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
+                        desktop:placeholder:text-xl desktop:text-xl
+                        desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                        "
                         placeholder='E-Mail-Adresse*'
                     />
                     {/* {emailError && <span className="text-red-600 text-sm">Email is required</span>} */}
@@ -230,7 +253,10 @@ const CustomerForm = () => {
                         value={formData.user.phone}
                         onChange={handleChange}
                         required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
+                        desktop:placeholder:text-xl desktop:text-xl
+                        desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                        "
                         placeholder='Telefon*'
                     />
                     {/* {phoneError && <span className="text-red-600 text-sm">Phone number is required</span>} */}
@@ -248,7 +274,10 @@ const CustomerForm = () => {
                             value={formData.user.zip_code}
                             onChange={handleChange}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
+                            desktop:placeholder:text-xl desktop:text-xl
+                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                            "
                             placeholder='Zip code*'
                         />
                         {/* {zipError && <span className="text-red-600 text-sm">Zip code is required</span>} */}
@@ -263,7 +292,10 @@ const CustomerForm = () => {
                             value={formData.user.city}
                             onChange={handleChange}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
+                            desktop:placeholder:text-xl desktop:text-xl
+                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                            "
                             placeholder='City*'
                         />
                         {/* {cityError && <span className="text-red-600 text-sm">Zip code is required</span>} */}
@@ -279,14 +311,17 @@ const CustomerForm = () => {
                         value={formData.user.street}
                         onChange={handleChange}
                         required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
+                        desktop:placeholder:text-xl desktop:text-xl
+                        desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                        "
                         placeholder='Street*'
                     />
                     {/* {streetError && <span className="text-red-600 text-sm">Street is required</span>} */}
                 </div>
                 <div className="flex
                     mobileSmall:flex-col mobileSmall:gap-2 w-full
-                    tablet:w-1/2"
+                    tablet:w-full"
                 >
                     <select
                         id="pickupQuantity"
@@ -294,7 +329,10 @@ const CustomerForm = () => {
                         value={selectedPickupQuantity}
                         onChange={(e) => setselectedPickupQuantity(e.target.value)}
                         required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
+                        desktop:placeholder:text-xl desktop:text-xl
+                        desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                        "
                     >
                         <option value="" disabled className='italic text-sm'>Anzahl der Gänsepakete*</option>
                         {pickUpQuantity.map((item, index) => (
@@ -319,7 +357,10 @@ const CustomerForm = () => {
                             onChange={(e) => setSelectedPickupAddress(e.target.value)}
                             required
                             placeholder='Adresse der Abholung*'
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
+                            desktop:placeholder:text-xl desktop:text-xl
+                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                            "
                         >
                             <option value="" disabled className='italic text-sm'>Adresse der Abholung*</option>
                             {pickUpAddressList.map((address, index) => (
@@ -339,7 +380,10 @@ const CustomerForm = () => {
                             value={selectedPickupTime}
                             onChange={(e) => setSelectedPickupTime(e.target.value)}
                             required
-                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4"
+                            className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-md focus:border-textColor focus:border-4
+                            desktop:placeholder:text-xl desktop:text-xl
+                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                            "
                         >
                             <option value="" disabled className='italic text-sm'>Uhrzeit der Abholung*</option>
                             {pickUpTime.map((item, index) => (
@@ -348,29 +392,41 @@ const CustomerForm = () => {
                                 </option>
                             ))}
                         </select>
-                        <label htmlFor="pickupTime" className="text-textColor font-Montserrat text-sm italic">Nur am 24.12 zwischen 12.00 - 15.00 Uhr</label>
+                        <label htmlFor="pickupTime"
+                            className="text-textColor font-Montserrat text-sm italic
+                            desktop:placeholder:text-xl desktop:text-xl
+                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                        "
+                        >Nur am 24.12 zwischen 12.00 - 15.00 Uhr</label>
                     </div>
                 </div>
 
-                <div className='flex justify-start gap-2 w-full'>
+                <div className='flex justify-start gap-2 w-full items-center'>
                     <input
                         type="checkbox"
                         id="agreement"
                         name="agreement"
                         checked={formData.agreement}
                         onChange={handleChange}
+                        className='desktopLarge:w-10 desktopLarge:h-10 desktopLarge:text-3xl'
                         required
                     />
-                    <label htmlFor="agreement" className="text-textColor font-Montserrat text-sm">Einwilligung zur Datenverwendung</label>
+                    <label htmlFor="agreement"
+                        className="text-textColor font-Montserrat text-sm
+                        desktop:placeholder:text-xl desktop:text-xl
+                        desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                    "
+                    >
+                        Einwilligung zur Datenverwendung</label>
                 </div>
 
                 <div className="flex
                     mobileSmall:flex-col mobileSmall:gap-2 w-full
                     tablet:w-full">
-                    <p className='italic text-textColor text-sm leading-8'>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
+                    <p className='italic text-textColor text-sm leading-8 desktop:text-lg desktop:leading-10 desktopLarge:text-3xl desktopLarge:leading-loose'>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
                         Sie können diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an <span className='underline font-extrabold'>info@jaegerundlustig.de</span>
                         . Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt. Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</p>
-                    <p className="italic text-textColor text-sm leading-8">Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung</p>
+                    <p className="italic text-textColor text-sm leading-8 desktop:text-lg desktop:leading-10 desktopLarge:text-3xl desktopLarge:leading-loose">Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung</p>
                 </div>
                 <Modal
                     isOpen={boxAdd}
@@ -385,8 +441,10 @@ const CustomerForm = () => {
                         <span>Please pay attention to your phone.</span>
                     </div>
                 </Modal>
-                <div className="w-full flex justify-center px-3 py-4 bg-itemsBackground text-textColor font-extrabold rounded-md mb-6 cursor-pointer">
-                    <button type="submit">Absenden</button>
+                <div className="w-full flex justify-center px-3 py-4 bg-itemsBackground text-textColor font-extrabold hover:border-4 hover:bg-neutral-600 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
+                    <button className="
+                    desktop:text-xl
+                    desktopLarge:text-3xl" type="submit">Absenden</button>
                 </div>
             </form>
         </div>

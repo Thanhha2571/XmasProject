@@ -42,7 +42,8 @@ const Product = (props) => {
     return (
         <div className="flex flex-col font-Changa px-40 py-8 w-full h-auto gap-16 bg-backGround justify-center items-center
         mobileSmall:px-4 mobileSmall:gap-5
-        laptop:px-12 laptop:gap-12
+        tablet:px-12
+        laptop:px-16 laptop:gap-12
         desktop:px-32 desktop:py-8 desktop:gap-16
         ">
             {productList.map((product, index) =>
@@ -55,6 +56,7 @@ const Product = (props) => {
                 mobileSmall:h-20
                 laptop:h-32
                 desktop:h-36
+                desktopLarge:h-48
             " />
         </div>
     )

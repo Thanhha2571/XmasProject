@@ -5,6 +5,12 @@ import Hero2 from "../../asset/cocopost3.jpg";
 import Hero3 from "../../asset/cocopost4.jpg";
 import Hero4 from "../../asset/cocopost5.jpg";
 import Hero5 from "../../asset/cocopost7.jpg";
+import Hero1Rectangle from "../../asset/1.png"
+import Hero2Rectangle from "../../asset/3.png"
+import Hero3Rectangle from "../../asset/4.png"
+import Hero4Rectangle from "../../asset/5.png"
+import Hero5Rectangle from "../../asset/7.png"
+
 const contentStyle = {
     height: '100%',
     color: '#fff',
@@ -13,52 +19,56 @@ const contentStyle = {
     textAlign: 'center',
     background: '#364d79',
 };
+
+const isDesktop = window.innerWidth > 1024;
+
 const Hero = () => (
     <Carousel autoplay className='w-full h-full'>
         <div>
             <h3 style={contentStyle}>
-                <img className='w-full h-[600px] 
+                <img className='w-full h-auto
                 mobileSmall:h-auto
-                laptop:h-[500px]
-                desktop:h-[650px]' 
-                src={Hero1} 
+                laptop:h-auto
+                desktop:h-auto'
+                    src={isDesktop ? Hero1Rectangle : Hero1}
                 />
             </h3>
         </div>
         <div>
             <h3 style={contentStyle}>
-                <img className='w-full h-[600px] 
+                <img className='w-full h-auto
                 mobileSmall:h-auto
-                laptop:h-[500px]
-                desktop:h-[650px]'
-                 src={Hero2} />
+                laptop:h-auto
+                desktop:h-auto'
+                    src={isDesktop ? Hero2Rectangle : Hero2}
+                />
             </h3>
         </div>
         <div>
             <h3 style={contentStyle}>
-                <img className='w-full h-[600px] 
+                <img className='w-full h-auto
                 mobileSmall:h-auto
-                laptop:h-[500px]
-                desktop:h-[650px]' 
-                src={Hero3} />
+                laptop:h-auto
+                desktop:h-auto'
+                    src={isDesktop ? Hero3Rectangle : Hero3} />
             </h3>
         </div>
         <div>
             <h3 style={contentStyle}>
-                <img className='w-full h-[600px] 
+                <img className='w-full h-auto
                 mobileSmall:h-auto
-                laptop:h-[500px]
-                desktop:h-[650px]' 
-                src={Hero4} />
+                laptop:h-auto
+                desktop:h-auto'
+                    src={isDesktop ? Hero4Rectangle : Hero4} />
             </h3>
         </div>
         <div>
             <h3 style={contentStyle}>
-                <img className='w-full h-[600px] 
+                <img className='w-full h-auto
                 mobileSmall:h-auto
-                laptop:h-[500px]
-                desktop:h-[650px]' 
-                src={Hero5} 
+                laptop:h-auto
+                desktop:h-auto'
+                    src={isDesktop ? Hero5Rectangle : Hero5}
                 />
             </h3>
         </div>

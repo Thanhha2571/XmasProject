@@ -23,6 +23,8 @@ module.exports = {
     screens: {
       'mobileSmall': '320px',
       // => @media (min-width: 320px) { ... }
+      'mobileLarge': '425px',
+      // => @media (min-width: 425px) { ... }
       'tablet': '768px',
       // => @media (min-width: 768px) { ... }
       'laptop': '1024px',
@@ -30,6 +32,8 @@ module.exports = {
 
       'desktop': '1440px',
       // => @media (min-width: 1280px) { ... }
+      'desktopLarge': '1920px',
+      // => @media (min-width: 1920px) { ... }
     },
 
   },
