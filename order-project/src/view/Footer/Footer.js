@@ -15,54 +15,52 @@ const Footer = () => {
         <div className="flex flex-col w-full h-auto bg-footerBackground opacity-95
         mobileSmall:px-4 mobileSmall:gap-5 mobileSmall:justify-center mobileSmall:items-center
         ">
-            <div className="flex flex-col
+            <div className="flex flex-col gap-5
+                laptop:flex-row
             ">
-                <div className=" hidden 
-                    desktop:flex deskop:flex-row desktop:justify-center desktop:gap-[400px] desktop:mt-20 desktop:ml-10
-                ">
-                    <div className="text-[50px] font-DancingScript text-footerTitle font-bold">Kontakt</div>
-                    <div className="text-[50px] font-DancingScript text-footerTitle font-bold">Öffnungszeiten</div>
-                </div>
-                <div className="flex flex-col gap-10 
-                    desktop:flex-row desktop:justify-center desktop:gap-[400px]
+                <div className="flex flex-row gap-5 
                 ">
                     <div className="flex flex-col gap-3">
                         <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
-                            mobileSmall:text-[35px]
-                            mobileLarge:text-[35px]
-                            tablet:text-[35px]
+                            mobileSmall:text-[15px]
+                            mobileLarge:text-[15px]
+                            tablet:text-[15px]
                             desktop:hidden
 
                     ">Kontakt:</p>
                         <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
-                            mobileSmall:text-[35px]
-                            mobileLarge:text-[35px]
-                            tablet:text-[35px]
-                            desktop:text-[35px]
+                            mobileSmall:text-[15px]
+                            mobileLarge:text-[15px]
+                            tablet:text-[15px]
+                            desktop:text-[20px] desktop:mt-10
+                            desktopLarge:text-[35px]
                     ">CôCô Indochine</p>
-                        <p className="flex w-full text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                        <p className="flex w-full text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Augustinerstraße 1, 90403 Nürnberg
 
                         </p>
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Telefon: <span className="underline ml-2">0911 23735510</span>
 
                         </p>
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
                 
             ">
                             E-Mail: <span className="underline ml-2">indochine@the-coco.de</span>
@@ -73,147 +71,159 @@ const Footer = () => {
                         mobileSmall:items-center
                         desktop:items-start
                     ">
-                        <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
-                            mobileSmall:text-[35px] mobileSmall:items-center
-                            mobileLarge:text-[35px] mobileLarge:items-center
-                            tablet:text-[35px] tablet:items-center
-                            desktop:text-[35px] desktop:text-textColor
-                    ">Öffnungszeiten:</p>
+                        {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
+                            mobileSmall:text-[15px] mobileSmall:items-center
+                            mobileLarge:text-[15px] mobileLarge:items-center
+                            tablet:text-[15px] tablet:items-center
+                            desktop:text-[15px] desktop:text-textColor
+                    ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose
-                mobileSmall:text-base mobileSmall:text-center
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose
+                mobileSmall:text-[8px] mobileSmall:text-center
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             12:00 Uhr bis 23:00 Uhr
 
                         </p>
 
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                tablet:text-xl
-                laptop:text-base
+                mobileSmall:text-[8px] mobileSmall:text-center
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             12:00 Uhr bis 15:00 Uhr
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             1.Weihnachtsfeiertag 25.12.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             geschlossen
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Silvester 31.12.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Neujahr 01.01.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             geschlossen
 
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-10
-                    desktop:flex-row desktop:justify-between">
+                <div className="flex flex-row gap-5">
                     <div className="flex flex-col gap-3">
-                        <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
-                            mobileSmall:text-[35px]
-                            mobileLarge:text-[35px]
-                            tablet:text-[35px]
+                        {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
+                            mobileSmall:text-[15px]
+                            mobileLarge:text-[15px]
+                            tablet:text-[15px]
                             desktop:hidden
-                    ">Kontakt:</p>
-                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
-                            mobileSmall:text-[35px]
-                            mobileLarge:text-[45px]
-                            tablet:text-[35px]
-                            desktop:text-[35px]
+                    ">Kontakt:</p> */}
+                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript mt-10
+                            mobileSmall:text-[15px]
+                            mobileLarge:text-[15px]
+                            tablet:text-[15px]
+                            desktop:text-[15px]
                             desktopLarge:text-[35px]
                     ">CôCô Fürth</p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Obstmarkt 3, 90762 Fürth
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Telefon: <span className="underline ml-2">0911 25345029</span>
 
                         </p>
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             E-Mail: <span className="underline ml-2">sushiandgrill@the-coco.de</span>
 
@@ -223,148 +233,160 @@ const Footer = () => {
                         mobileSmall:items-center
                         desktop:items-start
                     ">
-                        <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
-                            mobileSmall:text-[35px] mobileSmall:items-center
-                            mobileLarge:text-[35px] mobileLarge:items-center
-                            tablet:text-[35px] tablet:items-center
-                            desktop:text-[35px] desktop:items-start desktop:text-textColor desktop:mt-0
-                    ">Öffnungszeiten:</p>
+                        {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
+                            mobileSmall:text-[15px] mobileSmall:items-center
+                            mobileLarge:text-[15px] mobileLarge:items-center
+                            tablet:text-[15px] tablet:items-center
+                            desktop:text-[15px] desktop:items-start desktop:text-textColor desktop:mt-0
+                    ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose
-                mobileSmall:text-base mobileSmall:text-center
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose
+                mobileSmall:text-[8px] mobileSmall:text-center
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             17:00 Uhr bis 23:00 Uhr
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             12:00 Uhr bis 15:00 Uhr
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             1.Weihnachtsfeiertag 25.12.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             Geschlossen
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             Silvester 31.12.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             Neujahr 01.01.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
+                desktopLarge:text-[15px]
             ">
                             Geschlossen
 
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-10
-                    desktop:flex-row desktop:justify-between
+                <div className="flex flex-row gap-5
                 ">
                     <div className="flex flex-col gap-3">
-                        <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
-                            mobileSmall:text-[35px]
-                            mobileLarge:text-[35px]
-                            tablet:text-[35px]
+                        {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
+                            mobileSmall:text-[15px]
+                            mobileLarge:text-[15px]
+                            tablet:text-[15px]
                             desktop:hidden
-                    ">Kontakt:</p>
-                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
-                            mobileSmall:text-[35px]
-                            mobileLarge:text-[35px]
-                            tablet:text-[35px]
-                            desktop:text-[35px]
+                    ">Kontakt:</p> */}
+                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript mt-10
+                            mobileSmall:text-[15px]
+                            mobileLarge:text-[15px]
+                            tablet:text-[15px]
+                            desktop:text-[15px]
                             desktopLarge:text-[35px]
                     ">CôCô Erlangen</p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Nürnberger Str. 31, 91052 Erlangen
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             Telefon: <span className="underline ml-2">09131 5314934</span>
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
-                tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
+                tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
+                laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
+                desktopLarge:text-[15px]
             ">
                             E-Mail: <span className="underline ml-2">e.service@the-coco.de</span>
 
@@ -373,122 +395,134 @@ const Footer = () => {
                     <div className="flex flex-col justify-center gap-3
                         mobileSmall:items-center
                         desktop:items-start">
-                        <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
-                            mobileSmall:text-[35px]
-                            mobileLarge:text-[35px]
-                            tablet:text-[35px]
-                            desktop:text-[35px] desktop:items-start desktop:text-textColor desktop:mt-0
-                    ">Öffnungszeiten:</p>
+                        {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
+                            mobileSmall:text-[15px]
+                            mobileLarge:text-[15px]
+                            tablet:text-[15px]
+                            desktop:text-[15px] desktop:items-start desktop:text-textColor desktop:mt-0
+                    ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose
-                mobileSmall:text-base mobileSmall:text-center
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose
+                mobileSmall:text-[8px] mobileSmall:text-center
+                laptop:text-[8px] laptop:mt-10
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             11:00 Uhr bis 23:00 Uhr
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             12:00 Uhr bis 15:00 Uhr
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             1.Weihnachtsfeiertag 25.12.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             Geschlossen
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             Silvester 31.12.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             Neujahr 01.01.2023:
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             10:00 Uhr bis 23:00 Uhr Frühstücks-
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-[8px] text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             und Bruchbuffet von 10:00 Uhr
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center   
-                tablet:text-xl
-                laptop:text-base
+                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                mobileSmall:text-[8px] mobileSmall:text-center   
+                tablet:text-[8px]
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
+                desktopLarge:text-[15px]
             ">
                             bis 15:00 Uhr
 
@@ -513,10 +547,10 @@ const Footer = () => {
                         href="/impressum"
                         className="flex text-2xl text-footerText font-Changa leading-loose font-bold
           mobileSmall:text-base mobileSmall:text-center
-          tablet:text-xl
-          laptop:text-2xl
-          desktop:text-2xl
-          desktopLarge:text-2xl"
+          tablet:text-base
+          laptop:text-base
+          desktop:text-base
+          desktopLarge:text-base"
                     >
                         IMPRESSUM
                     </a>
@@ -524,9 +558,9 @@ const Footer = () => {
             href="/datenschutzerklaerung"
             className="flex text-2xl text-footerText font-Changa leading-loose font-bold mb-10
               mobileSmall:text-base mobileSmall:text-center 
-              tablet:text-xl
-              laptop:text-2xl
-              desktopLarge:text-2xl">
+              tablet:text-base
+              laptop:text-base
+              desktopLarge:text-base">
             DATENSCHUTZERKLÄRUNG
           </a>
                 </div>

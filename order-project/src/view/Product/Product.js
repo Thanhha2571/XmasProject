@@ -8,6 +8,14 @@ import Product5 from "../../asset/Shushi4.jpg";
 import Santa from "../../asset/santa.png";
 const Product = (props) => {
     // const { quantity, setQuantity, orderName, setOrderName } = props;
+    const scrollToSection = () => {
+        // Calculate scroll amount based on screen height
+        const screenHeight = window.innerHeight;
+        const scrollAmount = screenHeight * 0.8; // Adjust the multiplier as needed
+      
+        // Scroll with smooth behavior
+        window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+      };
     const productList = [
         {
             id: 1,
@@ -55,6 +63,14 @@ const Product = (props) => {
                     img={product.img}
                     imgRectangle={product.imgRectangle}
                 />)}
+
+            <div className="w-[300px] flex justify-center font-DancingScript px-3 py-4 bg-textWarning text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
+                <button 
+                onClick={scrollToSection}
+                className="w-full h-full
+                    desktop:text-3xl
+                    desktopLarge:text-3xl" type="submit">Jetzt online bestellen</button>
+            </div>
             <img src={Santa} className="w-full h-36
                 mobileSmall:h-auto
                 laptop:h-auto
