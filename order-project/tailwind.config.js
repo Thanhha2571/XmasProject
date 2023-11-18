@@ -15,6 +15,7 @@ module.exports = {
         'footerBackground': '#E3D3C4',
         'footerText': '#1f4335',
         'footerTitle': '#525252',
+        'buttonIcon': '#be0000'
       },
       // colors: {
       //   'textColor': '#ffffff',

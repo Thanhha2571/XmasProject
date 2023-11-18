@@ -9,6 +9,14 @@ import BoyIcon from "../../asset/boy.png"
 import GirlIcon from "../../asset/girl.png"
 import FireIcon from "../../asset/fire.png"
 const TextIntro = () => {
+    const scrollToSection = () => {
+        // Calculate scroll amount based on screen height
+        const screenHeight = window.innerHeight;
+        const scrollAmount = screenHeight * 2.6; // Adjust the multiplier as needed
+
+        // Scroll with smooth behavior
+        window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+    };
     return (
         <div className="bg-backGround opacity-95 flex flex-col gap-10 px-40 py-8 w-full h-auto items-center
         mobileSmall:px-4 mobileSmall:gap-2
@@ -94,61 +102,10 @@ const TextIntro = () => {
             ">
                 Sichern Sie sich Ihr köstliches Weihnachtsgans und genießen Sie eine sorgenfreie und festliche Zeit mit Ihren Liebsten. Wir freuen uns darauf, Ihnen einen winterlichen Hochgenuss zu bieten.
             </p>
-            <div className="flex flex-row gap-2 justify-center items-center mt-2
-                tablet:mt-4 tablet:gap-4
-                desktop:mt-8 desktop:gap-8
-                desktopLarge:mt-14 desktopLarge:gap-14
-            ">
-                <img src={SnowIcon} className="w-6 h-6
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={SnowMan} className="w-6 h-6 rotate-[-20deg]
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={Reindeer} className="w-6 h-6 rotate-[20deg]
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={Sleigh} className="w-6 h-6 rotate-[-20deg]
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={SantaIcon} className="w-6 h-6 rotate-[20deg]
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={GiftIcon} className="w-6 h-6 rotate-[-20deg]
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={BoyIcon} className="w-6 h-6 rotate-[20deg]
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={GirlIcon} className="w-6 h-6 rotate-[-20deg]
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={FireIcon} className="w-6 h-6 rotate-[20deg]
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
-                <img src={SnowIcon} className="w-6 h-6
-                    tablet:w-12 tablet:h-12
-                    desktop:w-20 desktop:h-20
-                    desktopLarge:w-28 desktopLarge:h-28
-                "/>
+            <div className="w-[300px] flex justify-center font-DancingScript px-3 py-4 bg-buttonIcon text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
+                <button
+                    onClick={scrollToSection}
+                    className="w-full h-full text-3xl" type="submit">Jetzt online bestellen</button>
             </div>
         </div>
     )

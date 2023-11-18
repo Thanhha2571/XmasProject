@@ -13,32 +13,34 @@ const Footer = () => {
     }
     return (
         <div className="flex flex-col w-full h-auto bg-footerBackground opacity-95
-        mobileSmall:px-4 mobileSmall:gap-5 mobileSmall:justify-center mobileSmall:items-center
+        mobileSmall:px-4 mobileSmall:justify-center mobileSmall:items-center
         ">
-            <div className="flex flex-col gap-5
-                laptop:flex-row laptop:justify-between
+            {/* <p className="w-full font-bold text-footerTitle text-[50px] font-DancingScript 
+                            mobileSmall:text-[15px] mobileSmall:mt-10 mobileSmall:ml-28
+                            mobileLarge:text-[15px]
+                            tablet:text-[15px]
+
+                    ">Kontakt:</p> */}
+            <div className="flex flex-col gap-2 mt-10
+                tablet:flex-row tablet:justify-between
+                laptop:flex-row laptop:justify-between laptop:gap-6
                 desktop:gap-28
 
             ">
-                <div className="flex flex-row gap-5 
-                desktop:gap-10
+                <div className="flex flex-row gap-3
+                laptop:gap-4
+                desktop:gap-6
+                desktopLarge:gap-6
                 ">
-                    <div className="flex flex-col gap-3">
-                        <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
-                            mobileSmall:text-[15px]
-                            mobileLarge:text-[15px]
-                            tablet:text-[15px]
-                            desktop:hidden
-
-                    ">Kontakt:</p>
+                    <div className="flex flex-col">
                         <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
                             tablet:text-[15px]
-                            desktop:text-[20px] desktop:mt-10
+                            desktop:text-[20px]
                             desktopLarge:text-[35px]
                     ">CôCô Indochine</p>
-                        <p className="flex w-full text-footerText font-Changa leading-loose font-bold
+                        <p className="flex w-full text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -48,7 +50,7 @@ const Footer = () => {
                             Augustinerstraße 1, 90403 Nürnberg
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -58,7 +60,7 @@ const Footer = () => {
                             Telefon: <span className="underline ml-2">0911 23735510</span>
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -70,7 +72,7 @@ const Footer = () => {
 
                         </p>
                     </div>
-                    <div className="flex flex-col justify-center gap-3
+                    <div className="flex flex-col
                         mobileSmall:items-center
                         desktop:items-start
                     ">
@@ -81,8 +83,8 @@ const Footer = () => {
                             desktop:text-[15px] desktop:text-textColor
                     ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-footerText font-Changa leading-loose
-                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:mt-10
+                        <p className="flex text-footerText font-Changa
+                mobileSmall:text-[8px] mobileSmall:text-center
                 laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
                 desktopLarge:text-[15px]
@@ -90,7 +92,7 @@ const Footer = () => {
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
@@ -100,7 +102,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -110,7 +112,7 @@ const Footer = () => {
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -121,7 +123,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -132,7 +134,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -142,7 +144,7 @@ const Footer = () => {
                             geschlossen
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -153,7 +155,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -163,7 +165,7 @@ const Footer = () => {
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -174,7 +176,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -186,23 +188,25 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-row gap-5
-                desktop:gap-10">
-                    <div className="flex flex-col gap-3">
+                <div className="flex flex-row gap-3
+                                laptop:gap-4
+                                desktop:gap-6
+                                desktopLarge:gap-6">
+                    <div className="flex flex-col">
                         {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
                             tablet:text-[15px]
                             desktop:hidden
                     ">Kontakt:</p> */}
-                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript mt-10
+                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
                             tablet:text-[15px]
                             desktop:text-[15px]
                             desktopLarge:text-[35px]
                     ">CôCô Fürth</p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -212,7 +216,7 @@ const Footer = () => {
                             Obstmarkt 3, 90762 Fürth
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -222,7 +226,7 @@ const Footer = () => {
                             Telefon: <span className="underline ml-2">0911 25345029</span>
 
                         </p>
-                        <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -233,8 +237,8 @@ const Footer = () => {
 
                         </p>
                     </div>
-                    <div className="flex flex-col justify-center gap-3
-                        mobileSmall:items-center mobileSmall:mt-10
+                    <div className="flex flex-col
+                        mobileSmall:items-center
                         desktop:items-start desktop:mt-0
                     ">
                         {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
@@ -244,7 +248,7 @@ const Footer = () => {
                             desktop:text-[15px] desktop:items-start desktop:text-textColor desktop:mt-0
                     ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-footerText font-Changa leading-loose
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
@@ -253,7 +257,7 @@ const Footer = () => {
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 laptop:text-[8px]
                 desktop:justify-start desktop:items-start desktop:text-left
@@ -263,7 +267,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -273,7 +277,7 @@ const Footer = () => {
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -284,7 +288,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -295,7 +299,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -305,7 +309,7 @@ const Footer = () => {
                             Geschlossen
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -316,7 +320,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -326,7 +330,7 @@ const Footer = () => {
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -337,7 +341,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -349,24 +353,26 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-row gap-5
-                desktop:gap-10
+                <div className="flex flex-row gap-3
+                                laptop:gap-4
+                                desktop:gap-6
+                                desktopLarge:gap-6
                 ">
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col">
                         {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
                             tablet:text-[15px]
                             desktop:hidden
                     ">Kontakt:</p> */}
-                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript mt-10
+                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
                             tablet:text-[15px]
                             desktop:text-[15px]
                             desktopLarge:text-[35px]
                     ">CôCô Erlangen</p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -376,7 +382,7 @@ const Footer = () => {
                             Nürnberger Str. 31, 91052 Erlangen
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -386,7 +392,7 @@ const Footer = () => {
                             Telefon: <span className="underline ml-2">09131 5314934</span>
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-[8px] tablet:text-center tablet:justify-center tablet:items-center
                 laptop:text-[8px] laptop:text-center laptop:justify-center laptop:items-center
@@ -397,10 +403,10 @@ const Footer = () => {
 
                         </p>
                     </div>
-                    <div className="flex flex-col justify-center gap-3
-                        mobileSmall:items-center mobileSmall:mt-10
-                        laptop:mt-20
-                        desktop:items-start desktop:mt-15">
+                    <div className="flex flex-col
+                        mobileSmall:items-center
+                        laptop:mt-0
+                        desktop:items-start desktop:mt-0">
                         {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
@@ -408,7 +414,7 @@ const Footer = () => {
                             desktop:text-[15px] desktop:items-start desktop:text-textColor desktop:mt-0
                     ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-footerText font-Changa leading-loose
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
@@ -417,7 +423,7 @@ const Footer = () => {
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
@@ -427,7 +433,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -437,7 +443,7 @@ const Footer = () => {
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -448,7 +454,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -459,7 +465,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -469,7 +475,7 @@ const Footer = () => {
                             Geschlossen
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -480,7 +486,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -490,7 +496,7 @@ const Footer = () => {
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -501,7 +507,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -512,7 +518,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-[8px] text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-[8px] text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -523,7 +529,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa leading-loose font-bold
+                        <p className="flex text-footerText font-Changa
                 mobileSmall:text-[8px] mobileSmall:text-center   
                 tablet:text-[8px]
                 laptop:text-[8px]
@@ -536,7 +542,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-3
+            <div className="flex flex-col
                 desktop:justify-start
             ">
                 {/* <div className="flex flex-col gap-3">
@@ -548,15 +554,15 @@ const Footer = () => {
                             desktopLarge:text-[100px]
                     ">Info:</p>
                 </div> */}
-                <div className="flex flex-col justify-center items-center gap-3">
+                <div className="flex flex-col justify-center items-center mt-5">
                     <a
                         target="_blank"
                         href="/impressum"
-                        className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-          mobileSmall:text-base mobileSmall:text-center
-          tablet:text-base
-          laptop:text-base
-          desktop:text-base
+                        className="flex text-footerText font-Changa
+          mobileSmall:text-sm mobileSmall:text-center
+          tablet:text-sm
+          laptop:text-sm
+          desktop:text-sm
           desktopLarge:text-base"
                     >
                         IMPRESSUM
@@ -564,10 +570,10 @@ const Footer = () => {
                     <a
                         target="_blank"
                         href="/datenschutzerklaerung"
-                        className="flex text-2xl text-footerText font-Changa leading-loose font-bold mb-10
-              mobileSmall:text-base mobileSmall:text-center 
-              tablet:text-base
-              laptop:text-base
+                        className="flex text-footerText font-Changa mb-10
+              mobileSmall:text-sm mobileSmall:text-center 
+              tablet:text-sm
+              laptop:text-sm
               desktopLarge:text-base">
                         DATENSCHUTZERKLÄRUNG
                     </a>

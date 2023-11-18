@@ -143,7 +143,7 @@ const CustomerForm = () => {
         setTimeout(() => {
             setBoxAdd(false)
             window.location.reload();
-        }, 1000);
+        }, 3000);
 
         // localStorage.clear();
     };
@@ -384,7 +384,7 @@ const CustomerForm = () => {
                         <span className='text-center desktop:text-3xl'>Wir senden Ihnen eine Bestellbestätigung an:{formData.user.email}</span>
                     </div>
                 </Modal>
-                <div className="w-full flex justify-center px-3 py-4 bg-textWarning text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
+                <div className="w-full flex justify-center px-3 py-4 bg-buttonIcon text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
                     <button className="w-full h-full
                     desktop:text-xl
                     desktopLarge:text-3xl" type="submit">Absenden</button>
