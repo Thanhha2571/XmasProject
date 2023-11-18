@@ -42,7 +42,7 @@ const Product = (props) => {
         // },
     ];
     return (
-        <div className="flex flex-col font-Changa px-40 py-8 w-full h-auto gap-16 bg-backGround justify-center items-center
+        <div className="flex flex-col font-Changa px-40 py-8 w-full h-auto gap-16 bg-backGround opacity-95 justify-center items-center
         mobileSmall:px-4 mobileSmall:gap-5
         tablet:px-12
         laptop:px-16 laptop:gap-12

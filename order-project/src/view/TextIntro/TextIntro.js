@@ -10,11 +10,11 @@ import GirlIcon from "../../asset/girl.png"
 import FireIcon from "../../asset/fire.png"
 const TextIntro = () => {
     return (
-        <div className="bg-backGround flex flex-col gap-10 px-40 py-8 w-full h-auto items-center
-        mobileSmall:px-4 mobileSmall:gap-3
+        <div className="bg-backGround opacity-95 flex flex-col gap-10 px-40 py-8 w-full h-auto items-center
+        mobileSmall:px-4 mobileSmall:gap-2
         tablet:px-12
-        laptop:px-16 laptop:gap-8
-        desktop:px-32 desktop:gap-10
+        laptop:px-16 laptop:gap-4
+        desktop:px-32 desktop:gap-4
         ">
 
             <div className="flex flex-col gap-1 text-center">
@@ -26,7 +26,7 @@ const TextIntro = () => {
             "
 
                 >
-                    Gans schön lecker</div>
+                    Gans schön lecker!</div>
 
                 <div className="font-DancingScript text-textTitle text-[50px] 
             mobileSmall:text-[30px]
@@ -42,16 +42,16 @@ const TextIntro = () => {
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
                 desktop:text-3xl
-                desktopLarge:text-5xl
+                desktopLarge:text-4xl
             ">
                 Freuen Sie sich auf den Höhepunkt des Festes: unsere köstliche Gans, meisterhaft zubereitet von unseren erfahrenen Köchen.
             </p>
 
-            <p className="flex text-2xl text-textWarning font-Changa leading-loose italic
+            <p className="flex text-2xl text-textWarning font-Changa leading-loose
                 mobileSmall:text-lg mobileSmall:text-center
                 tablet:text-xl
                 desktop:text-3xl
-                desktopLarge:text-5xl
+                desktopLarge:text-4xl
             ">
                 Unsere Weihnachtsgänse sind am 24.12.2023 von 12:00 Uhr bis 15:00 Uhr erhältlich.
             </p>
@@ -59,30 +59,30 @@ const TextIntro = () => {
             <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                desktop:text-3xl
-                desktopLarge:text-5xl
+                desktop:text-2xl
+                desktopLarge:text-4xl
             ">
-                Damit Sie ein vollständiges Festmahl genießen können, verkaufen wir unsere Gans mit sorgfältig ausgewählten Beilagen:
+                Damit Sie ein vollständiges Festmahl genießen können, verkaufen wir unsere Gans mit sorgfältig ausgewählten Beilagen: hausgemachtem Rotkohl, der eine perfekte Mischung aus süß und würzig bietet, und Klößen, die eine ideale Begleitung für die zarte Gans sind.
             </p>
-            <p className="flex text-2xl text-textColor font-Changa leading-loose italic
+            {/* <p className="flex text-2xl text-textColor font-Changa leading-loose italic
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
                 desktop:text-3xl
                 desktopLarge:text-5xl
             ">
                 hausgemachtem Rotkohl, der eine perfekte Mischung aus süß und würzig bietet, und Klößen, die eine ideale Begleitung für die zarte Gans sind.
-            </p>
+            </p> */}
             {/* <img src={WarningIcon} className="w-10 h-10
                 tablet:w-12 tablet:h-12
                 desktop:w-20 desktop:h-20
                 desktopLarge:w-32 desktopLarge:h-32
             "
             /> */}
-            <p className="flex text-2xl text-textColor font-Changa underline
+            <p className="flex text-2xl text-textColor font-Changa italic
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
                 desktop:text-2xl
-                desktopLarge:text-5xl
+                desktopLarge:text-4xl
             ">
                 Bitte beachten Sie, dass die Vorbestellung Ihres Weihnachtsgänseessens erforderlich ist, um sicherzustellen, dass wir Ihnen die beste Qualität und den besten Service bieten können.
             </p>
@@ -90,7 +90,7 @@ const TextIntro = () => {
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
                 desktop:text-2xl
-                desktopLarge:text-5xl
+                desktopLarge:text-4xl
             ">
                 Sichern Sie sich Ihr köstliches Weihnachtsgans und genießen Sie eine sorgenfreie und festliche Zeit mit Ihren Liebsten. Wir freuen uns darauf, Ihnen einen winterlichen Hochgenuss zu bieten.
             </p>

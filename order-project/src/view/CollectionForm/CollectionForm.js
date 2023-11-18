@@ -161,11 +161,11 @@ const CustomerForm = () => {
 
             ">Bestellformular</div>
             <div className="w-full text-center font-bold text-textWarning font-Montserrat relative italic
-                mobileSmall:text-[15px]
-                tablet:text-[20px]
-                laptop:text-[25px]
-                desktop:text-[30px]
-                desktopLarge:text-[35px]
+                mobileSmall:text-[12px]
+                tablet:text-[15px]
+                laptop:text-[15px]
+                desktop:text-[15px]
+                desktopLarge:text-[15px]
             ">Bitte bestellen Sie Ihr Gänsepaket spätestens 2 Tage vor Abholtermin. Letze Bestellannahme ist am 21.12.2023</div>
             <div></div>
             <form
@@ -377,7 +377,7 @@ const CustomerForm = () => {
                         <span>Please pay attention to your phone.</span>
                     </div>
                 </Modal>
-                <div className="w-full flex justify-center px-3 py-4 bg-itemsBackground text-textColor font-extrabold hover:border-4 hover:bg-neutral-600 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
+                <div className="w-full flex justify-center px-3 py-4 bg-textWarning text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
                     <button className="w-full h-full
                     desktop:text-xl
                     desktopLarge:text-3xl" type="submit">Absenden</button>
