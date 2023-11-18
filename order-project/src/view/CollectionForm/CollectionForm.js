@@ -131,16 +131,17 @@ const CustomerForm = () => {
             }]
         });
         // console.log(data);
-        setFormData({
-            user: {
-                first_name: '',
-                last_name: '',
-                email: '',
-                phone: '',
-            },
-            agreement: false,
-        });
+        // setFormData({
+        //     user: {
+        //         first_name: '',
+        //         last_name: '',
+        //         email: '',
+        //         phone: '',
+        //     },
+        //     agreement: false,
+        // });
         setTimeout(() => {
+            setBoxAdd(false)
             window.location.reload();
         }, 1000);
 
@@ -370,8 +371,8 @@ const CustomerForm = () => {
                     overlayClassName="popup-overlay"
                     className="popup-content"
                 >
-                    <button onClick={() => setBoxAdd(false)} className="text-2xl text-textColor w-7 h-7 ml-auto">x</button>
-                    <div className="flex flex-col gap-2 text-textColor text-base justify-center items-center p-2 desktop:gap-4">
+                    <button onClick={() => setBoxAdd(false)} className="text-2xl text-black w-7 h-7 ml-auto">x</button>
+                    <div className="flex flex-col gap-2 text-black text-base justify-center items-center p-2 desktop:gap-4">
                         <span className='font-DancingScript text-3xl text-center
                             desktop:text-5xl desktop:mt-10
                         '>CÔCÔ</span>

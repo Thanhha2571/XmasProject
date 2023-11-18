@@ -56,10 +56,10 @@ const Product = (props) => {
                     imgRectangle={product.imgRectangle}
                 />)}
             <img src={Santa} className="w-full h-36
-                mobileSmall:h-20
-                laptop:h-32
-                desktop:h-36
-                desktopLarge:h-48
+                mobileSmall:h-auto
+                laptop:h-auto
+                desktop:h-auto
+                desktopLarge:h-auto
             " />
         </div>
     )

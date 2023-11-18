@@ -34,7 +34,7 @@ const Footer = () => {
                             desktop:hidden
 
                     ">Kontakt:</p>
-                        <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
+                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
                             mobileLarge:text-[35px]
                             tablet:text-[35px]
@@ -184,7 +184,7 @@ const Footer = () => {
                             tablet:text-[35px]
                             desktop:hidden
                     ">Kontakt:</p>
-                        <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
+                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
                             mobileLarge:text-[45px]
                             tablet:text-[35px]
@@ -335,7 +335,7 @@ const Footer = () => {
                             tablet:text-[35px]
                             desktop:hidden
                     ">Kontakt:</p>
-                        <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
+                        <p className="w-full text-center font-bold text-textWarning text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
                             mobileLarge:text-[35px]
                             tablet:text-[35px]
