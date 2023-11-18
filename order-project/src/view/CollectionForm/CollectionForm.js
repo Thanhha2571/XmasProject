@@ -21,7 +21,7 @@ const CustomerForm = () => {
         },
         agreement: false,
     });
-    const [boxAdd, setBoxAdd] = useState(true)
+    const [boxAdd, setBoxAdd] = useState(false)
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     const [selectedPickupTime, setSelectedPickupTime] = useState('');
     const [selectedPickupQuantity, setselectedPickupQuantity] = useState('');
