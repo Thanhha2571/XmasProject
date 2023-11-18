@@ -21,7 +21,7 @@ const CustomerForm = () => {
         },
         agreement: false,
     });
-    const [boxAdd, setBoxAdd] = useState(false)
+    const [boxAdd, setBoxAdd] = useState(true)
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     const [selectedPickupTime, setSelectedPickupTime] = useState('');
     const [selectedPickupQuantity, setselectedPickupQuantity] = useState('');
@@ -371,8 +371,8 @@ const CustomerForm = () => {
                     overlayClassName="popup-overlay"
                     className="popup-content"
                 >
-                    <button onClick={() => setBoxAdd(false)} className="text-2xl text-black w-7 h-7 ml-auto">x</button>
-                    <div className="flex flex-col gap-2 text-black text-base justify-center items-center p-2 desktop:gap-4">
+                    <button onClick={() => setBoxAdd(false)} className="text-2xl text-white w-7 h-7 ml-auto">x</button>
+                    <div className="flex flex-col gap-2 text-white text-base justify-center items-center p-2 desktop:gap-4">
                         <span className='font-DancingScript text-3xl text-center
                             desktop:text-5xl desktop:mt-10
                         '>CÔCÔ</span>
