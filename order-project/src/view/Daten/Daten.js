@@ -415,56 +415,131 @@ const Danten = () => {
                             <div>Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.</div>
                             <div>Browser Plugin</div>
                             <div>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch den Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: </div>
+                            <a className="underline" href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout?hl=de</a>
                             <div>Widerspruch gegen Datenerfassung</div>
                             <div>Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie auf folgenden Link klicken. Es wird ein Opt-Out-Cookie gesetzt, der die Erfassung Ihrer Daten bei zukünftigen Besuchen dieser Website verhindert:</div>
+
+                        </div>
+                        <div className="flex flex-col gap-1 font-Changa text-textColor
+                        mobileSmall:text-base
+                        laptop:text-xl
+                        desktopLarge:text-3xl
+                    ">
+                            <div>Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von Google:</div>
+                            <a className="underline" href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank" rel="noopener noreferrer">https://support.google.com/analytics/answer/6004245?hl=de</a>
+                        </div>
+                        <div className="flex flex-col gap-1 font-Changa text-textColor
+                        mobileSmall:text-base
+                        laptop:text-xl
+                        desktopLarge:text-3xl
+                    ">
+                            <div>Auftragsverarbeitung</div>
+                            <div>Wir haben mit Google einen Vertrag zur Auftragsverarbeitung abgeschlossen und setzen die strengen Vorgaben der deutschen Datenschutzbehörden bei der Nutzung von Google Analytics vollständig um.</div>
+                        </div>
+                        <div className="flex flex-col gap-1 font-Changa text-textColor
+                        mobileSmall:text-base
+                        laptop:text-xl
+                        desktopLarge:text-3xl
+                    ">
+                            <div>Speicherdauer</div>
+                            <div>Bei Google gespeicherte Daten auf Nutzer- und Ereignisebene, die mit Cookies, Nutzerkennungen (z. B. User ID) oder Werbe-IDs (z. B. DoubleClick-Cookies, Android-Werbe-ID) verknüpft sind, werden nach 14 Monaten anonymisiert bzw. gelöscht. Details hierzu ersehen Sie unter folgendem Link: </div>
+                            <a className="underline" href="https://support.google.com/analytics/answer/7667196?hl=de" target="_blank" rel="noopener noreferrer">https://support.google.com/analytics/answer/7667196?hl=de</a>
                         </div>
                         <p className="text-textTitle font-Changa
                         mobileSmall:text-2xl
                         laptop:text-4xl
                         desktopLarge:text-6xl
                     ">
-                            Kontaktformular
+                            Google Ads und Google Conversion-Tracking
+                        </p>
+                        <div className="flex flex-col gap-1 font-Changa text-textColor
+                        mobileSmall:text-base
+                        laptop:text-xl
+                        desktopLarge:text-3xl
+                    ">
+                            <div>Diese Website verwendet Google Ads. Google Ads ist ein Online-Werbeprogramm der Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland.</div>
+                            <div>Im Rahmen von Google Ads nutzen wir das so genannte Conversion-Tracking. Wenn Sie auf eine von Google geschaltete Anzeige klicken wird ein Cookie für das Conversion-Tracking gesetzt. Bei Cookies handelt es sich um kleine Textdateien, die der Internet-Browser auf dem Computer des Nutzers ablegt. Diese Cookies verlieren nach 30 Tagen ihre Gültigkeit und dienen nicht der persönlichen Identifizierung der Nutzer. Besucht der Nutzer bestimmte Seiten dieser Website und das Cookie ist noch nicht abgelaufen, können Google und wir erkennen, dass der Nutzer auf die Anzeige geklickt hat und zu dieser Seite weitergeleitet wurde.</div>
+                            <div>Jeder Google Ads-Kunde erhält ein anderes Cookie. Die Cookies können nicht über die Websites von Google Ads-Kunden nachverfolgt werden. Die mithilfe des Conversion-Cookies eingeholten Informationen dienen dazu, Conversion-Statistiken für Google Ads-Kunden zu erstellen, die sich für Conversion-Tracking entschieden haben. Die Kunden erfahren die Gesamtanzahl der Nutzer, die auf ihre Anzeige geklickt haben und zu einer mit einem Conversion-Tracking-Tag versehenen Seite weitergeleitet wurden. Sie erhalten jedoch keine Informationen, mit denen sich Nutzer persönlich identifizieren lassen. Wenn Sie nicht am Tracking teilnehmen möchten, können Sie dieser Nutzung widersprechen, indem Sie das Cookie des Google Conversion-Trackings über ihren Internet-Browser unter Nutzereinstellungen leicht deaktivieren. Sie werden sodann nicht in die Conversion-Tracking Statistiken aufgenommen.</div>
+                            <div>Die Speicherung von „Conversion-Cookies“ und die Nutzung dieses Tracking-Tools erfolgen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der Analyse des Nutzerverhaltens, um sowohl sein Webangebot als auch seine Werbung zu optimieren. Sofern eine entsprechende Einwilligung abgefragt wurde (z. B. eine Einwilligung zur Speicherung von Cookies), erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar.</div>
+                            <div>Mehr Informationen zu Google Ads und Google Conversion-Tracking finden Sie in den Datenschutzbestimmungen von Google: </div>
+                            <a className="underline" href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>
+                            <div>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.</div>
+                            <div>Wir nutzen außerdem zur Online-Werbung folgende Diensteanbieter:</div>
+                            <div>Facebook Pixel</div>
+                            <div>Diensteanbieter: Facebook Inc., 1 Hacker Way, Menlo Park, CA 94025, USA</div>
+                            <div>Sitz in Europa: Facebook Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland</div>
+                            <div>Internetseite: </div>
+                            <a target="_blank" href="https://www.facebook.com">https://www.facebook.com</a>
+                            <div>Datenschutzerklärung: </div>
+                            <a target="_blank" href="https://www.facebook.com/about/privacy">https://www.facebook.com/about/privacy</a>
+                            <div>Opt-Out-Möglichkeit:</div>
+                            <a target="_blank" href="https://www.facebook.com/settings?tab=ads">https://www.facebook.com/settings?tab=ads</a>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-5">
+                        <p className="text-textTitle font-DancingScript italic
+                        mobileSmall:text-2xl
+                        laptop:text-4xl
+                        desktopLarge:text-6xl
+                    ">
+                            6. Plugins und Tools
+                        </p>
+                        <p className="text-textTitle font-Changa
+                        mobileSmall:text-2xl
+                        laptop:text-4xl
+                        desktopLarge:text-6xl
+                    ">
+                            Google Web Fonts
+                        </p>
+                        <div className="flex flex-col gap-1 font-Changa text-textColor
+                        mobileSmall:text-base
+                        laptop:text-xl
+                        desktopLarge:text-3xl
+                    ">
+                            <div>Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt.</div>
+                        </div>
+                        <p className="text-textTitle font-Changa
+                        mobileSmall:text-2xl
+                        laptop:text-4xl
+                        desktopLarge:text-6xl
+                    ">
+                            Google Maps
                         </p>
                         <div className="flex flex-col gap-3 font-Changa text-textColor
                         mobileSmall:text-base
                         laptop:text-xl
                         desktopLarge:text-3xl
                     ">
-                            <div>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</div>
-                            <div>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.</div>
-                            <div>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</div>
+                            <div>Diese Seite nutzt über eine API den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland.</div>
+                            <div>Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Der Anbieter dieser Seite hat keinen Einfluss auf diese Datenübertragung.</div>
+                            <div>Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und an einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</div>
+                            <div>Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google: </div>
+                            <a className="underline" href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>
                         </div>
                         <p className="text-textTitle font-Changa
                         mobileSmall:text-2xl
                         laptop:text-4xl
                         desktopLarge:text-6xl
                     ">
-                            Anfrage per E-Mail, Telefon oder Telefax
+                            Einsatz von Online-Plattformen zu Angebots- und Vertriebszwecken
                         </p>
                         <div className="flex flex-col gap-1 font-Changa text-textColor
                         mobileSmall:text-base
                         laptop:text-xl
                         desktopLarge:text-3xl
                     ">
-                            <div>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</div>
-                            <div>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und/oder auf unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO), da wir ein berechtigtes Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen haben.</div>
-                            <div>Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.</div>
+                            <div>Wir bieten unsere Leistungen über Online-Plattformen, die von anderen Dienstanbietern betrieben werden, an. In diesem Zusammenhang gelten zusätzlich zu unseren Datenschutzhinweisen die Datenschutzhinweise der jeweiligen Plattformen. Dies gilt insbesondere im Hinblick auf die Durchführung des Zahlungsvorgangs und der auf den Plattformen eingesetzten Verfahren zur Reichweitemessung und zum interessensbezogenen Marketing.</div>
+                            <div className="ml-4 flex flex-col gap-4 mt-3 ">
+                                <div>Verarbeitete Datenarten: Bestandsdaten (z.B. Namen, Adressen); Zahlungsdaten (z.B. Bankverbindungen, Rechnungen, Zahlungshistorie); Kontaktdaten (z.B. E-Mail, Telefonnummern); Vertragsdaten (z.B. Vertragsgegenstand, Laufzeit, Kundenkategorie); Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten); Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen).</div>
+                                <div>Betroffene Personen: Kunden.</div>
+                                <div>Zwecke der Verarbeitung: Erbringung vertraglicher Leistungen und Kundenservice; Marketing.</div>
+                                <div>Rechtsgrundlagen: Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO); Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</div>
+                            </div>
                         </div>
-                        <p className="text-textTitle font-Changa
-                        mobileSmall:text-2xl
-                        laptop:text-4xl
-                        desktopLarge:text-6xl
-                    ">
-                            Verarbeiten von Daten (Kunden- und Vertragsdaten)
-                        </p>
-                        <div className="flex flex-col gap-1 font-Changa text-textColor
-                        mobileSmall:text-base
-                        laptop:text-xl
-                        desktopLarge:text-3xl
-                    ">
-                            <div>Wir erheben, verarbeiten und nutzen personenbezogene Daten nur, soweit sie für die Begründung, inhaltliche Ausgestaltung oder Änderung des Rechtsverhältnisses erforderlich sind (Bestandsdaten). Dies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von Daten zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet. Personenbezogene Daten über die Inanspruchnahme dieser Website (Nutzungsdaten) erheben, verarbeiten und nutzen wir nur, soweit dies erforderlich ist, um dem Nutzer die Inanspruchnahme des Dienstes zu ermöglichen oder abzurechnen.</div>
-                            <div>Die erhobenen Kundendaten werden nach Abschluss des Auftrags oder Beendigung der Geschäftsbeziehung gelöscht. Gesetzliche Aufbewahrungsfristen bleiben unberührt.</div>
-                        </div>
+                    </div>
+                    <div className="flex flex-col gap-5 text-textColor">
+                        <div className="italic">Umtausch und Stornierungen</div>
+                        <p>Wenn Sie Ihre Bestellung stornieren oder ändern möchten, wenden Sie sich bitte baldmöglichst an uns unter 091123735510, oder schicken Sie eine E-Mail an <span className="underline">service@the-coco.de</span> Wir werden uns nach besten Kräften bemühen, Ihrem Ersuchen nachzukommen. Allerdings können wir nicht garantieren, dass ein Einkauf storniert oder geändert werden kann, wenn eine Bestellung erst einmal aufgegeben wurde.</p>
                     </div>
                 </div>
                 <Footer />

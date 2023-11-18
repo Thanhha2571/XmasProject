@@ -549,6 +549,7 @@ const Footer = () => {
                 </div> */}
                 <div className="flex flex-col justify-center items-center gap-3">
                     <a
+                        target="_blank"
                         href="/impressum"
                         className="flex text-2xl text-footerText font-Changa leading-loose font-bold
           mobileSmall:text-base mobileSmall:text-center
@@ -560,14 +561,15 @@ const Footer = () => {
                         IMPRESSUM
                     </a>
                     <a
-            href="/datenschutzerklaerung"
-            className="flex text-2xl text-footerText font-Changa leading-loose font-bold mb-10
+                        target="_blank"
+                        href="/datenschutzerklaerung"
+                        className="flex text-2xl text-footerText font-Changa leading-loose font-bold mb-10
               mobileSmall:text-base mobileSmall:text-center 
               tablet:text-base
               laptop:text-base
               desktopLarge:text-base">
-            DATENSCHUTZERKLÄRUNG
-          </a>
+                        DATENSCHUTZERKLÄRUNG
+                    </a>
                 </div>
             </div>
         </div>
