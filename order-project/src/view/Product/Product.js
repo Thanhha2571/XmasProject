@@ -64,7 +64,7 @@ const Product = (props) => {
                     imgRectangle={product.imgRectangle}
                 />)}
 
-            <div className="w-[300px] flex justify-center font-DancingScript px-3 py-4 bg-textWarning text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
+            <div className="fixed z-50 w-[300px] flex justify-center font-DancingScript px-3 py-4 bg-textWarning text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">
                 <button 
                 onClick={scrollToSection}
                 className="w-full h-full

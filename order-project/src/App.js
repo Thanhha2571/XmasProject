@@ -32,7 +32,7 @@ function App() {
               <span className="fusion-imageframe imageframe-none imageframe-1 hover-type-none pulsate right-4 top-4 mobileSmall:right-6 mobileSmall:top-6 tablet:right-10 tablet:top-10">
                 <img
                   src="https://ccu.lieferbude.de/static/img/logo_white.4185c536c1cb.png"
-                  className="w-16 h-32 mobileSmall:w-16 mobileSmall:h-24 tablet:w-24 tablet:h-28 desktop:w-32 desktop:h-40 desktopLarge:w-44 desktopLarge:h-60"
+                  className="w-16 h-32 mobileSmall:w-16 mobileSmall:h-24 tablet:w-24 tablet:h-28"
                 />
               </span>
               {/* <Home /> */}

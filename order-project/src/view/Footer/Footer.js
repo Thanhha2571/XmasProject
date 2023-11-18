@@ -16,9 +16,12 @@ const Footer = () => {
         mobileSmall:px-4 mobileSmall:gap-5 mobileSmall:justify-center mobileSmall:items-center
         ">
             <div className="flex flex-col gap-5
-                laptop:flex-row
+                laptop:flex-row laptop:justify-between
+                desktop:gap-28
+
             ">
                 <div className="flex flex-row gap-5 
+                desktop:gap-10
                 ">
                     <div className="flex flex-col gap-3">
                         <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
@@ -183,7 +186,8 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-row gap-5">
+                <div className="flex flex-row gap-5
+                desktop:gap-10">
                     <div className="flex flex-col gap-3">
                         {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
                             mobileSmall:text-[15px]
@@ -346,6 +350,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="flex flex-row gap-5
+                desktop:gap-10
                 ">
                     <div className="flex flex-col gap-3">
                         {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
