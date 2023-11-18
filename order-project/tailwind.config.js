@@ -10,7 +10,7 @@ module.exports = {
         'textColor': '#E3D3C4',
         'backGround': '#1f4335',
         'itemsBackground': '#808080',
-        'textWarning': '#d05757',
+        'textWarning': '#6e0e14',
         'textTitle': '#fcd451',
         'footerBackground': '#E3D3C4',
         'footerText': '#1f4335',

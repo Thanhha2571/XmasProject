@@ -24,7 +24,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/impressum" element={<Impressum />} />
-        <Route path="/dante" element={<Danten />} />
+        <Route path="/datenschutzerklaerung" element={<Danten />} />
         <Route
           path="/"
           element={

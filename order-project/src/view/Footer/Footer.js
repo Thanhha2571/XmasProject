@@ -8,8 +8,8 @@ const Footer = () => {
     // }
 
     const handleDante = () => {
-        navigate("/dante")
-        console.log("sfs");
+        navigate("/datenschutzerklaerung")
+        // console.log("sfs");
     }
     return (
         <div className="flex flex-col w-full h-auto bg-footerBackground opacity-95
@@ -34,7 +34,7 @@ const Footer = () => {
                             desktop:hidden
 
                     ">Kontakt:</p>
-                        <p className="w-full text-center font-bold text-textTitle text-[50px] font-DancingScript
+                        <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
                             mobileLarge:text-[45px]
                             tablet:text-[60px]
@@ -185,7 +185,7 @@ const Footer = () => {
                             tablet:text-[60px]
                             desktop:hidden
                     ">Kontakt:</p>
-                        <p className="w-full text-center font-bold text-textTitle text-[50px] font-DancingScript
+                        <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
                             mobileLarge:text-[45px]
                             tablet:text-[60px]
@@ -336,7 +336,7 @@ const Footer = () => {
                             tablet:text-[60px]
                             desktop:hidden
                     ">Kontakt:</p>
-                        <p className="w-full text-center font-bold text-textTitle text-[50px] font-DancingScript
+                        <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
                             mobileLarge:text-[45px]
                             tablet:text-[60px]
@@ -522,7 +522,7 @@ const Footer = () => {
                         IMPRESSUM
                     </Link>
                     <Link
-            to="/dante"
+            to="/datenschutzerklaerung"
             className="flex text-2xl text-footerText font-Changa leading-loose font-bold mb-10
               mobileSmall:text-base mobileSmall:text-center 
               tablet:text-xl
