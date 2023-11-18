@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 const Footer = () => {
+    const navigate = useNavigate()
+
+    // const handleImpressum = () => {
+    //     navigate("/impressum")
+    // }
+
+    const handleDante = () => {
+        navigate("/dante")
+        console.log("sfs");
+    }
     return (
-        <div className="flex flex-col w-full h-auto bg-footerBackground
+        <div className="flex flex-col w-full h-auto bg-footerBackground opacity-95
         mobileSmall:px-4 mobileSmall:gap-5 mobileSmall:justify-center mobileSmall:items-center
         ">
             <div className="flex flex-col
@@ -470,7 +481,7 @@ const Footer = () => {
                 laptop:text-2xl
                 desktop:justify-start desktop:items-start 
             ">
-                            und Bruchbuffet von 10:00 Uhr 
+                            und Bruchbuffet von 10:00 Uhr
 
                         </p>
 
@@ -480,7 +491,7 @@ const Footer = () => {
                 laptop:text-2xl
                 desktop:justify-start desktop:items-start 
             ">
-                     bis 15:00 Uhr
+                            bis 15:00 Uhr
 
                         </p>
                     </div>
@@ -499,22 +510,27 @@ const Footer = () => {
                     ">Info:</p>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-3">
-                    <span className="flex text-2xl text-footerText font-Changa leading-loose font-bold
-                mobileSmall:text-base mobileSmall:text-center
-                tablet:text-xl
-                laptop:text-2xl
-                desktop:text-3xl
-                desktopLarge:text-5xl">
+                    <Link
+                        to="/impressum"
+                        className="flex text-2xl text-footerText font-Changa leading-loose font-bold
+          mobileSmall:text-base mobileSmall:text-center
+          tablet:text-xl
+          laptop:text-2xl
+          desktop:text-3xl
+          desktopLarge:text-5xl"
+                    >
                         IMPRESSUM
-                    </span>
-                    <span className="flex text-2xl text-footerText font-Changa leading-loose font-bold mb-10
-                mobileSmall:text-base mobileSmall:text-center 
-                tablet:text-xl
-                laptop:text-2xl
-                desktop:text-3xl
-                desktopLarge:text-5xl">
-                        DATENSCHUTZERKLÄRUNG
-                    </span>
+                    </Link>
+                    <Link
+            to="/dante"
+            className="flex text-2xl text-footerText font-Changa leading-loose font-bold mb-10
+              mobileSmall:text-base mobileSmall:text-center 
+              tablet:text-xl
+              laptop:text-2xl
+              desktop:text-3xl
+              desktopLarge:text-5xl">
+            DATENSCHUTZERKLÄRUNG
+          </Link>
                 </div>
             </div>
         </div>
