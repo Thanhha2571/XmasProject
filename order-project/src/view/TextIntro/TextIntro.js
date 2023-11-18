@@ -72,12 +72,12 @@ const TextIntro = () => {
             ">
                 hausgemachtem Rotkohl, der eine perfekte Mischung aus süß und würzig bietet, und Klößen, die eine ideale Begleitung für die zarte Gans sind.
             </p>
-            <img src={WarningIcon} className="w-10 h-10
+            {/* <img src={WarningIcon} className="w-10 h-10
                 tablet:w-12 tablet:h-12
                 desktop:w-20 desktop:h-20
                 desktopLarge:w-32 desktopLarge:h-32
             "
-            />
+            /> */}
             <p className="flex text-2xl text-textColor font-Changa underline
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
