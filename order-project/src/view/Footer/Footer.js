@@ -82,7 +82,7 @@ const Footer = () => {
                     ">Öffnungszeiten:</p> */}
 
                         <p className="flex text-footerText font-Changa leading-loose
-                mobileSmall:text-[8px] mobileSmall:text-center
+                mobileSmall:text-[8px] mobileSmall:text-center mobileSmall:mt-10
                 laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
                 desktopLarge:text-[15px]
@@ -234,8 +234,8 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="flex flex-col justify-center gap-3
-                        mobileSmall:items-center
-                        desktop:items-start
+                        mobileSmall:items-center mobileSmall:mt-10
+                        desktop:items-start desktop:mt-0
                     ">
                         {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
                             mobileSmall:text-[15px] mobileSmall:items-center
@@ -398,8 +398,9 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="flex flex-col justify-center gap-3
-                        mobileSmall:items-center
-                        desktop:items-start">
+                        mobileSmall:items-center mobileSmall:mt-10
+                        laptop:mt-20
+                        desktop:items-start desktop:mt-15">
                         {/* <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
@@ -409,7 +410,7 @@ const Footer = () => {
 
                         <p className="flex text-footerText font-Changa leading-loose
                 mobileSmall:text-[8px] mobileSmall:text-center
-                laptop:text-[8px] laptop:mt-10
+                laptop:text-[8px]
                 desktop:justify-start desktop:items-start 
                 desktopLarge:text-[15px]
             ">
