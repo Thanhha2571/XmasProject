@@ -20,8 +20,8 @@ const Footer = () => {
                 <div className=" hidden 
                     desktop:flex deskop:flex-row desktop:justify-center desktop:gap-[400px] desktop:mt-20 desktop:ml-10
                 ">
-                    <div className="text-[70px] font-DancingScript text-footerTitle font-bold">Kontakt</div>
-                    <div className="text-[70px] font-DancingScript text-footerTitle font-bold">Öffnungszeiten</div>
+                    <div className="text-[50px] font-DancingScript text-footerTitle font-bold">Kontakt</div>
+                    <div className="text-[50px] font-DancingScript text-footerTitle font-bold">Öffnungszeiten</div>
                 </div>
                 <div className="flex flex-col gap-10 
                     desktop:flex-row desktop:justify-center desktop:gap-[400px]
@@ -29,21 +29,21 @@ const Footer = () => {
                     <div className="flex flex-col gap-3">
                         <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
                             mobileSmall:text-[35px]
-                            mobileLarge:text-[45px]
-                            tablet:text-[60px]
+                            mobileLarge:text-[35px]
+                            tablet:text-[35px]
                             desktop:hidden
 
                     ">Kontakt:</p>
                         <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
-                            mobileLarge:text-[45px]
-                            tablet:text-[45px]
-                            desktop:text-[45px]
+                            mobileLarge:text-[35px]
+                            tablet:text-[35px]
+                            desktop:text-[35px]
                     ">CôCô Indochine</p>
                         <p className="flex w-full text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
             ">
                             Augustinerstraße 1, 90403 Nürnberg
@@ -52,7 +52,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
             ">
                             Telefon: <span className="underline ml-2">0911 23735510</span>
@@ -61,7 +61,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
                 
             ">
@@ -75,14 +75,14 @@ const Footer = () => {
                     ">
                         <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
                             mobileSmall:text-[35px] mobileSmall:items-center
-                            mobileLarge:text-[45px] mobileLarge:items-center
-                            tablet:text-[45px] tablet:items-center
-                            desktop:text-[45px] desktop:text-textColor
+                            mobileLarge:text-[35px] mobileLarge:items-center
+                            tablet:text-[35px] tablet:items-center
+                            desktop:text-[35px] desktop:text-textColor
                     ">Öffnungszeiten:</p>
 
                         <p className="flex text-2xl text-footerText font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             Jeden Tag:
@@ -90,7 +90,7 @@ const Footer = () => {
                         </p>
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             12:00 Uhr bis 23:00 Uhr
@@ -100,7 +100,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start
             ">
                             Weihnachten 24.12.2023:
@@ -109,7 +109,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start
             ">
                             12:00 Uhr bis 15:00 Uhr
@@ -119,7 +119,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start
             ">
                             1.Weihnachtsfeiertag 25.12.2023:
@@ -129,7 +129,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start
             ">
                             geschlossen
@@ -138,7 +138,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start
             ">
                             Silvester 31.12.2023:
@@ -148,7 +148,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start
             ">
                             Küchenschluss um 21:00 Uhr
@@ -157,7 +157,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start
             ">
                             Neujahr 01.01.2023:
@@ -167,7 +167,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start
             ">
                             geschlossen
@@ -180,21 +180,21 @@ const Footer = () => {
                     <div className="flex flex-col gap-3">
                         <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
                             mobileSmall:text-[35px]
-                            mobileLarge:text-[45px]
-                            tablet:text-[45px]
+                            mobileLarge:text-[35px]
+                            tablet:text-[35px]
                             desktop:hidden
                     ">Kontakt:</p>
                         <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
                             mobileLarge:text-[45px]
-                            tablet:text-[45px]
-                            desktop:text-[45px]
-                            desktopLarge:text-[45px]
+                            tablet:text-[35px]
+                            desktop:text-[35px]
+                            desktopLarge:text-[35px]
                     ">CôCô Fürth</p>
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
             ">
                             Obstmarkt 3, 90762 Fürth
@@ -203,7 +203,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
             ">
                             Telefon: <span className="underline ml-2">0911 25345029</span>
@@ -212,7 +212,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
             ">
                             E-Mail: <span className="underline ml-2">sushiandgrill@the-coco.de</span>
@@ -225,14 +225,14 @@ const Footer = () => {
                     ">
                         <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
                             mobileSmall:text-[35px] mobileSmall:items-center
-                            mobileLarge:text-[45px] mobileLarge:items-center
-                            tablet:text-[45px] tablet:items-center
-                            desktop:text-[45px] desktop:items-start desktop:text-textColor desktop:mt-0
+                            mobileLarge:text-[35px] mobileLarge:items-center
+                            tablet:text-[35px] tablet:items-center
+                            desktop:text-[35px] desktop:items-start desktop:text-textColor desktop:mt-0
                     ">Öffnungszeiten:</p>
 
                         <p className="flex text-2xl text-footerText font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             Jeden Tag:
@@ -240,7 +240,7 @@ const Footer = () => {
                         </p>
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             17:00 Uhr bis 23:00 Uhr
@@ -250,7 +250,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             Weihnachten 24.12.2023:
@@ -259,7 +259,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             12:00 Uhr bis 15:00 Uhr
@@ -269,7 +269,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             1.Weihnachtsfeiertag 25.12.2023:
@@ -279,7 +279,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             Geschlossen
@@ -288,7 +288,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             Silvester 31.12.2023:
@@ -298,7 +298,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             Küchenschluss um 21:00 Uhr
@@ -307,7 +307,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             Neujahr 01.01.2023:
@@ -317,7 +317,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start desktop:text-left
             ">
                             Geschlossen
@@ -331,21 +331,21 @@ const Footer = () => {
                     <div className="flex flex-col gap-3">
                         <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-10
                             mobileSmall:text-[35px]
-                            mobileLarge:text-[45px]
-                            tablet:text-[45px]
+                            mobileLarge:text-[35px]
+                            tablet:text-[35px]
                             desktop:hidden
                     ">Kontakt:</p>
                         <p className="w-full text-center font-bold text-[#6e0e14] text-[50px] font-DancingScript
                             mobileSmall:text-[35px]
-                            mobileLarge:text-[45px]
-                            tablet:text-[45px]
-                            desktop:text-[45px]
-                            desktopLarge:text-[45px]
+                            mobileLarge:text-[35px]
+                            tablet:text-[35px]
+                            desktop:text-[35px]
+                            desktopLarge:text-[35px]
                     ">CôCô Erlangen</p>
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
             ">
                             Nürnberger Str. 31, 91052 Erlangen
@@ -354,7 +354,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
             ">
                             Telefon: <span className="underline ml-2">09131 5314934</span>
@@ -363,7 +363,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center mobileSmall:justify-center mobileSmall:items-center
                 tablet:text-xl tablet:text-center tablet:justify-center tablet:items-center
-                laptop:text-xl laptop:text-center laptop:justify-center laptop:items-center
+                laptop:text-base laptop:text-center laptop:justify-center laptop:items-center
                 desktop:justify-start desktop:items-start
             ">
                             E-Mail: <span className="underline ml-2">e.service@the-coco.de</span>
@@ -375,14 +375,14 @@ const Footer = () => {
                         desktop:items-start">
                         <p className="w-full text-center font-bold text-footerTitle text-[50px] font-DancingScript mt-5
                             mobileSmall:text-[35px]
-                            mobileLarge:text-[45px]
-                            tablet:text-[45px]
-                            desktop:text-[45px] desktop:items-start desktop:text-textColor desktop:mt-0
+                            mobileLarge:text-[35px]
+                            tablet:text-[35px]
+                            desktop:text-[35px] desktop:items-start desktop:text-textColor desktop:mt-0
                     ">Öffnungszeiten:</p>
 
                         <p className="flex text-2xl text-footerText font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             Jeden Tag:
@@ -390,7 +390,7 @@ const Footer = () => {
                         </p>
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             11:00 Uhr bis 23:00 Uhr
@@ -400,7 +400,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             Weihnachten 24.12.2023:
@@ -409,7 +409,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             12:00 Uhr bis 15:00 Uhr
@@ -419,7 +419,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             1.Weihnachtsfeiertag 25.12.2023:
@@ -429,7 +429,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             Geschlossen
@@ -438,7 +438,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             Silvester 31.12.2023:
@@ -448,7 +448,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             Küchenschluss um 21:00 Uhr
@@ -457,7 +457,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             Neujahr 01.01.2023:
@@ -467,7 +467,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             10:00 Uhr bis 23:00 Uhr Frühstücks-
@@ -477,7 +477,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             und Bruchbuffet von 10:00 Uhr
@@ -487,7 +487,7 @@ const Footer = () => {
                         <p className="flex text-2xl text-footerText font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center   
                 tablet:text-xl
-                laptop:text-xl
+                laptop:text-base
                 desktop:justify-start desktop:items-start 
             ">
                             bis 15:00 Uhr
@@ -515,8 +515,8 @@ const Footer = () => {
           mobileSmall:text-base mobileSmall:text-center
           tablet:text-xl
           laptop:text-2xl
-          desktop:text-3xl
-          desktopLarge:text-4xl"
+          desktop:text-2xl
+          desktopLarge:text-2xl"
                     >
                         IMPRESSUM
                     </a>
@@ -526,8 +526,7 @@ const Footer = () => {
               mobileSmall:text-base mobileSmall:text-center 
               tablet:text-xl
               laptop:text-2xl
-              desktop:text-3xl
-              desktopLarge:text-4xl">
+              desktopLarge:text-2xl">
             DATENSCHUTZERKLÄRUNG
           </a>
                 </div>

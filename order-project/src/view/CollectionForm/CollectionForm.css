@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,12 +16,19 @@
     border: 0;
     border-radius: 10px;
     /* justify-content: center; */
-    width: 300px;
-    height: 200px;
-    opacity: 0.9;
+    width: 400px;
+    height: 300px;
+    /* opacity: 0.9; */
     background-color: #2C2C2C;
     /* overflow: auto;
     margin: 0 auto; */
     /* align-items: center; */
     /* justify-content: center; */
+}
+
+@media (min-width: 1440px) {
+    .popup-content {
+        width: 600px;
+        height: 500px;
+    }
 }

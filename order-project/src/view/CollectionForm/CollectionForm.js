@@ -119,14 +119,14 @@ const CustomerForm = () => {
         // const pick_up_place = localStorage.getItem('pick_up_place');
         // const pick_up_date = localStorage.getItem('pick_up_date');
         const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
-            pick_up_date: selectedPickupTime,
+            pick_up_time: selectedPickupTime,
             pick_up_place: selectedPickupAddress,
             first_name: formData.user.first_name,
             last_name: formData.user.last_name,
             email: formData.user.email,
             phone_number: formData.user.phone,
             products: [{
-                product_name: "Gans",
+                product_name: "Ganspaket",
                 product_quantity: selectedPickupQuantity
             }]
         });
@@ -142,7 +142,7 @@ const CustomerForm = () => {
         });
         setTimeout(() => {
             window.location.reload();
-        }, 2000);
+        }, 1000);
 
         // localStorage.clear();
     };
@@ -370,11 +370,15 @@ const CustomerForm = () => {
                     overlayClassName="popup-overlay"
                     className="popup-content"
                 >
-                    <button onClick={() => setBoxAdd(false)} className="text-xl text-textColor w-7 h-7 ml-auto">x</button>
-                    <div className="flex flex-col gap-2 text-textColor text-base justify-center p-4">
-                        <span>Your order has been recored.</span>
-                        <span>We will contact you to check order again.</span>
-                        <span>Please pay attention to your phone.</span>
+                    <button onClick={() => setBoxAdd(false)} className="text-2xl text-textColor w-7 h-7 ml-auto">x</button>
+                    <div className="flex flex-col gap-2 text-textColor text-base justify-center items-center p-2 desktop:gap-4">
+                        <span className='font-DancingScript text-3xl text-center
+                            desktop:text-5xl desktop:mt-10
+                        '>CÔCÔ</span>
+                        <span className='font-bold text-center desktop:text-3xl'>Vielen Dank für Ihren Einkauf bei</span>
+                        <p className='font-bold text-center desktop:text-3xl'>CÔCÔ</p>
+                        <span className='text-center desktop:text-3xl'>Ihre Bestellung Nr.{formData.user.phone} wird berücksichtigt.</span>
+                        <span className='text-center desktop:text-3xl'>Wir senden Ihnen eine Bestellbestätigung an:{formData.user.email}</span>
                     </div>
                 </Modal>
                 <div className="w-full flex justify-center px-3 py-4 bg-textWarning text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md mb-6 cursor-pointer desktopLarge:px-5 desktopLarge:py-7 ">

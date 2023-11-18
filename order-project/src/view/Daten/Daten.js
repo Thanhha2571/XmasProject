@@ -8,7 +8,7 @@ const Danten = () => {
                 laptop:px-16
                 
             ">
-                    <div className="text-textTitle font-DancingScript mt-5 underline
+                    <div className="text-textTitle font-DancingScript mt-5 
                     mobileSmall:text-3xl
                     laptop:text-6xl
                     desktopLarge:text-8xl
@@ -329,7 +329,7 @@ const Danten = () => {
                         desktopLarge:text-3xl
                     ">
                             <div>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</div>
-                            <div className="ml-4 flex flex-col gap-4 mt-3 underline">
+                            <div className="ml-4 flex flex-col gap-4 mt-3 ">
                                 <div>Browsertyp und Browserversion</div>
                                 <div>verwendetes Betriebssystem</div>
                                 <div>Referrer URL</div>

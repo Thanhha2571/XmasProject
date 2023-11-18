@@ -7,14 +7,14 @@
     transition-property: max-width;
 }
 
-.pulsate {
+/* .pulsate {
     animation: 4s linear infinite pulse;
-}
+} */
 
 .fusion-imageframe {
     position: fixed;
-    z-index: 20;
-    overflow: hidden;
+    z-index: 50;
+    /* overflow: hidden; */
     vertical-align: middle;
     /* max-width: var(--awb-max-width); */
     line-height: 1;
