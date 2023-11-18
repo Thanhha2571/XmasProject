@@ -6,7 +6,7 @@ import { pickUpAddressList } from '../../asset/data/data';
 import { pickUpTime } from '../../asset/data/data';
 import { pickUpQuantity } from '../../asset/data/data';
 import "./CollectionForm.css"
-
+import CheckIcon from "../../asset/checkIcon.png"
 const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
     const [formData, setFormData] = useState({
@@ -372,7 +372,9 @@ const CustomerForm = () => {
                     className="popup-content"
                 >
                     <button onClick={() => setBoxAdd(false)} className="text-2xl text-white w-7 h-7 ml-auto">x</button>
+
                     <div className="flex flex-col gap-2 text-white text-base justify-center items-center p-2 desktop:gap-4">
+                        <img src={CheckIcon} className="w-20 h-20" />
                         <span className='font-DancingScript text-3xl text-center
                             desktop:text-5xl desktop:mt-10
                         '>CÔCÔ</span>
