@@ -620,7 +620,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-[8px] text-footerText font-Changa
+                        <p className="flex text-[8px] text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -633,7 +633,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
