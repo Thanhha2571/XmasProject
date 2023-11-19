@@ -11,6 +11,7 @@ import { data } from 'autoprefixer';
 const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
     const [listOrder, setListOrder] = useState()
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         user: {
             first_name: '',
@@ -27,6 +28,7 @@ const CustomerForm = () => {
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     const [selectedPickupTime, setSelectedPickupTime] = useState('');
     const [selectedPickupQuantity, setselectedPickupQuantity] = useState('');
+
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         if (name === 'agreement') {
@@ -51,25 +53,36 @@ const CustomerForm = () => {
             console.log('Please accept all terms and conditions.');
             return;
         }
-        const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
-            pick_up_time: selectedPickupTime,
-            pick_up_place: selectedPickupAddress,
-            first_name: formData.user.first_name,
-            last_name: formData.user.last_name,
-            email: formData.user.email,
-            phone_number: formData.user.phone,
-            // order_number:randomNumber,
-            products: [{
-                product_name: "Ganspaket",
-                product_quantity: selectedPickupQuantity
-            }]
-        });
-        setBoxAdd(true)
-        setListOrder(data);
-        setTimeout(() => {
-            setBoxAdd(false)
-            window.location.reload();
-        }, 3000);
+        setLoading(true);
+
+        try {
+            const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
+                pick_up_time: selectedPickupTime,
+                pick_up_place: selectedPickupAddress,
+                first_name: formData.user.first_name,
+                last_name: formData.user.last_name,
+                email: formData.user.email,
+                phone_number: formData.user.phone,
+                products: [{
+                    product_name: "Ganspaket",
+                    product_quantity: selectedPickupQuantity
+                }]
+            });
+
+            setBoxAdd(true);
+            setListOrder(data);
+
+            setTimeout(() => {
+                setBoxAdd(false);
+                window.location.reload();
+            }, 3000);
+
+        } catch (error) {
+            // Handle error
+            console.error("Error submitting form:", error);
+        } finally {
+            setLoading(false);
+        }
 
     };
     return (
@@ -103,6 +116,9 @@ const CustomerForm = () => {
                 "
                 onSubmit={handleSubmit}
             >
+                {loading && (<div className="absolute flex w-full h-full items-center justify-center">
+                    <div className="loader"></div>
+                </div>)}
                 <div className="flex justify-between w-full
                     mobileSmall:flex-col mobileSmall:gap-5 mobileSmall:w-full   
                     tablet:flex-row     
