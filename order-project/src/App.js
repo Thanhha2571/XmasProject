@@ -15,6 +15,7 @@ import "./theme.css";
 import "./App.css";
 import Impressum from "./view/Impressum/Impressum";
 import Danten from "./view/Daten/Daten";
+import Logo from "./asset/logo.png"
 function App() {
   // const [quantity, setQuantity] = useState(0)
   // const [orderName, setOrderName] = useState("")
@@ -29,10 +30,10 @@ function App() {
           path="/"
           element={
             <div className="bg-backGround flex flex-col relative w-full overflow-y-scroll">
-              <span className="fusion-imageframe imageframe-none imageframe-1 hover-type-none pulsate right-4 top-4 mobileSmall:right-6 mobileSmall:top-6 tablet:right-10 tablet:top-10">
+              <span className="fusion-imageframe imageframe-none imageframe-1 hover-type-none pulsate top-0 right-0">
                 <img
-                  src="https://ccu.lieferbude.de/static/img/logo_white.4185c536c1cb.png"
-                  className="w-16 h-32 mobileSmall:w-16 mobileSmall:h-24 tablet:w-24 tablet:h-28"
+                  src={Logo}
+                  className="w-[280px] h-auto"
                 />
               </span>
               {/* <Home /> */}

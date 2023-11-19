@@ -338,7 +338,7 @@ const CustomerForm = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-start gap-2 w-full items-center'>
+                <div className='flex justify-start gap-2 w-full'>
                     <input
                         type="checkbox"
                         id="agreement"
@@ -354,16 +354,7 @@ const CustomerForm = () => {
                         desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
                     "
                     >
-                        Einwilligung zur Datenverwendung</label>
-                </div>
-
-                <div className="flex
-                    mobileSmall:flex-col mobileSmall:gap-2 w-full
-                    tablet:w-full">
-                    <p className='italic text-textColor text-sm leading-8 desktop:text-lg desktop:leading-10 desktopLarge:text-3xl desktopLarge:leading-loose'>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
-                        Sie können diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an <span className='underline font-extrabold'>service@the-coco.de</span>
-                        . Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt. Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</p>
-                    <p className="italic text-textColor text-sm leading-8 desktop:text-lg desktop:leading-10 desktopLarge:text-3xl desktopLarge:leading-loose">Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung</p>
+                        Ich bestätige, dass ich die <a href='https://coco.lieferbude.de/static/pdf/terms_and_conditions.3f0f42936d6d.pdf' className='underline' target="_blank">Allgemeinen Geschäftsbedingungen</a> des Online-Stores einschließlich der<a href='https://coco.lieferbude.de/static/pdf/privacy_policy.adb8727a38b1.pdf' className='underline' target="_blank"> Danteschutzrichtlinien</a> gelesen und akzeptiert habe</label>
                 </div>
                 <Modal
                     isOpen={boxAdd}
