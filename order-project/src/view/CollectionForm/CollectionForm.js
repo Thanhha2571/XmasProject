@@ -7,8 +7,10 @@ import { pickUpTime } from '../../asset/data/data';
 import { pickUpQuantity } from '../../asset/data/data';
 import "./CollectionForm.css"
 import CheckIcon from "../../asset/checkIcon.png"
+import { data } from 'autoprefixer';
 const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
+    const [listOrder, setListOrder] = useState()
     const [formData, setFormData] = useState({
         user: {
             first_name: '',
@@ -25,36 +27,6 @@ const CustomerForm = () => {
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     const [selectedPickupTime, setSelectedPickupTime] = useState('');
     const [selectedPickupQuantity, setselectedPickupQuantity] = useState('');
-    // useEffect(() => {
-    //     if (formData.user.first_name.length > 0) {
-    //         setFirstNameError(false);
-    //     }
-    //     if (formData.user.last_name.length > 0) {
-    //         setLastNameError(false);
-    //     }
-    //     if (formData.user.email.length > 0) {
-    //         setEmailError(false);
-    //     }
-    //     if (formData.user.phone.length > 0) {
-    //         setPhoneError(false);
-    //     }
-    //     if (formData.user.zip_code.length > 0) {
-    //         setZipError(false);
-    //     }
-    //     if (formData.user.city.length > 0) {
-    //         setCityError(false);
-    //     }
-    //     if (formData.user.street.length > 0) {
-    //         setStreetError(false);
-    //     }
-    // },[formData.user.first_name,formData.user.last_name,formData.user.email, formData.user.phone,formData.user.zip_code,formData.user.city,formData.user.street ])
-    // const [firstNameError, setFirstNameError] = useState(false);
-    // const [lastNameError, setLastNameError] = useState(false);
-    // const [emailError, setEmailError] = useState(false);
-    // const [phoneError, setPhoneError] = useState(false);
-    // const [zipError, setZipError] = useState(false);
-    // const [cityError, setCityError] = useState(false);
-    // const [streetError, setStreetError] = useState(false);
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         if (name === 'agreement') {
@@ -72,52 +44,13 @@ const CustomerForm = () => {
             }));
         }
     };
-
-
-    // const handelError = () => {
-    //     if (formData.user.first_name.length === 0) {
-    //         setFirstNameError(true);
-    //     }
-    //     if (formData.user.last_name.length === 0) {
-    //         setLastNameError(true);
-    //     }
-    //     if (formData.user.email.length === 0) {
-    //         setEmailError(true);
-    //     }
-    //     if (formData.user.phone.length === 0) {
-    //         setPhoneError(true);
-    //     }
-    //     if (formData.user.zip_code.length === 0) {
-    //         setZipError(true);
-    //     }
-    //     if (formData.user.city.length === 0) {
-    //         setCityError(true);
-    //     }
-    //     if (formData.user.street.length === 0) {
-    //         setStreetError(true);
-    //     }
-    // }
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setBoxAdd(true)
         if (!formData.agreement) {
             // Handle the case when the agreement is not accepted
             console.log('Please accept all terms and conditions.');
             return;
         }
-        // console.log('Form submitted:', formData);
-        // const productsFromStorage = localStorage.getItem('products');
-
-        // const parsedProducts = productsFromStorage ? JSON.parse(productsFromStorage) : null;
-
-        // const orderList = parsedProducts.filter((product) => product.quantity > 0);
-        // console.log(orderList);
-        // setStoredValue(orderList);
-
-        // console.log(parsedProducts);
-
-        // const pick_up_place = localStorage.getItem('pick_up_place');
-        // const pick_up_date = localStorage.getItem('pick_up_date');
         const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
             pick_up_time: selectedPickupTime,
             pick_up_place: selectedPickupAddress,
@@ -131,24 +64,13 @@ const CustomerForm = () => {
                 product_quantity: selectedPickupQuantity
             }]
         });
+        setBoxAdd(true)
+        setListOrder(data);
+        setTimeout(() => {
+            setBoxAdd(false)
+            window.location.reload();
+        }, 3000);
 
-        console.log(data);
-        // console.log(data);
-        // setFormData({
-        //     user: {
-        //         first_name: '',
-        //         last_name: '',
-        //         email: '',
-        //         phone: '',
-        //     },
-        //     agreement: false,
-        // });
-        // setTimeout(() => {
-        //     setBoxAdd(false)
-        //     window.location.reload();
-        // }, 6000);
-
-        // localStorage.clear();
     };
     return (
         <div className="bg-backGround opacity-95 flex flex-col w-full h-auto relative
@@ -374,7 +296,7 @@ const CustomerForm = () => {
                         '>CÔCÔ</span>
                         <span className='font-bold text-center desktop:text-3xl'>Vielen Dank für Ihren Einkauf bei</span>
                         <p className='font-bold text-center desktop:text-3xl'>CÔCÔ</p>
-                        <span className='text-center desktop:text-3xl'>Ihre Bestellung Nr. wird berücksichtigt.</span>
+                        <span className='text-center desktop:text-3xl'>Ihre Bestellung Nr.{listOrder?.order_number} wird berücksichtigt.</span>
                         <span className='text-center desktop:text-3xl'>Wir senden Ihnen eine Bestellbestätigung an:{formData.user.email}</span>
                     </div>
                 </Modal>
