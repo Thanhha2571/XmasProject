@@ -30,6 +30,7 @@ module.exports = {
       "Changa": ["Roboto"],
       "DancingScript": ["Dancing Script"],
       "Montserrat": ["Montserrat"],
+      "Lato": ["Lato"],
     },
     screens: {
       'mobileSmall': '320px',

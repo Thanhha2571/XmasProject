@@ -48,7 +48,7 @@ const Footer = () => {
                             desktop:text-[25px]
                             desktopLarge:text-[35px]
                     ">CôCô Indochine</p>
-                        <p className="flex w-full text-footerText font-Changa
+                        <p className="flex w-full text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -60,7 +60,7 @@ const Footer = () => {
                             Augustinerstraße 1, 90403 Nürnberg
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -72,7 +72,7 @@ const Footer = () => {
                             Telefon: <span className="underline ml-2">0911 23735510</span>
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -96,7 +96,7 @@ const Footer = () => {
                             desktop:text-[15px] desktop:text-textColor
                     ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -108,7 +108,7 @@ const Footer = () => {
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -121,7 +121,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -133,7 +133,7 @@ const Footer = () => {
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -146,7 +146,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -159,7 +159,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -171,7 +171,7 @@ const Footer = () => {
                             geschlossen
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -184,7 +184,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -196,7 +196,7 @@ const Footer = () => {
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -209,7 +209,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -248,7 +248,7 @@ const Footer = () => {
                             desktop:text-[25px]
                             desktopLarge:text-[35px]
                     ">CôCô Fürth</p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -260,7 +260,7 @@ const Footer = () => {
                             Obstmarkt 3, 90762 Fürth
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -272,7 +272,7 @@ const Footer = () => {
                             Telefon: <span className="underline ml-2">0911 25345029</span>
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -295,7 +295,7 @@ const Footer = () => {
                             desktop:text-[15px] desktop:items-start desktop:text-textColor desktop:mt-0
                     ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -307,7 +307,7 @@ const Footer = () => {
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -320,7 +320,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -332,7 +332,7 @@ const Footer = () => {
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -345,7 +345,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -358,7 +358,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -370,7 +370,7 @@ const Footer = () => {
                             Geschlossen
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -383,7 +383,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -395,7 +395,7 @@ const Footer = () => {
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -408,7 +408,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -447,7 +447,7 @@ const Footer = () => {
                             desktop:text-[25px]
                             desktopLarge:text-[35px]
                     ">CôCô Erlangen</p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -459,7 +459,7 @@ const Footer = () => {
                             Nürnberger Str. 31, 91052 Erlangen
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -471,7 +471,7 @@ const Footer = () => {
                             Telefon: <span className="underline ml-2">09131 5314934</span>
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -494,7 +494,7 @@ const Footer = () => {
                             desktop:text-[15px] desktop:items-start desktop:text-textColor desktop:mt-0
                     ">Öffnungszeiten:</p> */}
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -506,7 +506,7 @@ const Footer = () => {
                             Jeden Tag:
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -519,7 +519,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -531,7 +531,7 @@ const Footer = () => {
                             Weihnachten 24.12.2023:
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -544,7 +544,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -557,7 +557,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -569,7 +569,7 @@ const Footer = () => {
                             Geschlossen
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -582,7 +582,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -594,7 +594,7 @@ const Footer = () => {
                             Küchenschluss um 21:00 Uhr
 
                         </p>
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -607,7 +607,7 @@ const Footer = () => {
 
                         </p>
 
-                        <p className="flex text-footerText font-Changa
+                        <p className="flex text-footerText font-Lato
                 mobileSmall:text-[8px]
                 mobileLarge:text-[9px]
                 mobileLarger:text-[10px]
@@ -664,7 +664,7 @@ const Footer = () => {
                     <a
                         target="_blank"
                         href="/impressum"
-                        className="flex text-footerText font-Changa
+                        className="flex text-footerText font-Lato
           mobileSmall:text-sm mobileSmall:text-center
           tablet:text-sm
           laptop:text-sm
@@ -676,7 +676,7 @@ const Footer = () => {
                     <a
                         target="_blank"
                         href="/datenschutzerklaerung"
-                        className="flex text-footerText font-Changa mb-10
+                        className="flex text-footerText font-Lato mb-10
               mobileSmall:text-sm mobileSmall:text-center 
               tablet:text-sm
               laptop:text-sm
