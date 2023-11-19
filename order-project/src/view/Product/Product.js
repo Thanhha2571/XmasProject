@@ -1,6 +1,6 @@
 import ProductItem from "./ProductItem";
 import Product1 from "../../asset/cocopost6.jpg";
-import Product1Rectangle from "../../asset/6.png"
+import Product1Rectangle from "../../asset/6.jpg"
 import Product2 from "../../asset/Shushi1.jpg";
 import Product3 from "../../asset/Shushi2.jpg";
 import Product4 from "../../asset/Shushi3.jpg";

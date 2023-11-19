@@ -49,8 +49,8 @@ const TextIntro = () => {
             <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                desktop:text-3xl
-                desktopLarge:text-4xl
+                desktop:text-xl
+                desktopLarge:text-xl
             ">
                 Freuen Sie sich auf den Höhepunkt des Festes: unsere köstliche Gans, meisterhaft zubereitet von unseren erfahrenen Köchen.
             </p>
@@ -58,8 +58,8 @@ const TextIntro = () => {
             <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-lg mobileSmall:text-center
                 tablet:text-xl
-                desktop:text-3xl
-                desktopLarge:text-4xl
+                desktop:text-xl
+                desktopLarge:text-xl
             ">
                 Unsere Weihnachtsgänse sind am 24.12.2023 von 12:00 Uhr bis 15:00 Uhr erhältlich.
             </p>
@@ -67,8 +67,8 @@ const TextIntro = () => {
             <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                desktop:text-2xl
-                desktopLarge:text-4xl
+                desktop:text-xl
+                desktopLarge:text-xl
             ">
                 Damit Sie ein vollständiges Festmahl genießen können, verkaufen wir unsere Gans mit sorgfältig ausgewählten Beilagen: hausgemachtem Rotkohl, der eine perfekte Mischung aus süß und würzig bietet, und Klößen, die eine ideale Begleitung für die zarte Gans sind.
             </p>
@@ -89,16 +89,16 @@ const TextIntro = () => {
             <p className="flex text-2xl text-textColor font-Changa italic
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                desktop:text-2xl
-                desktopLarge:text-4xl
+                desktop:text-xl
+                desktopLarge:text-xl
             ">
                 Bitte beachten Sie, dass die Vorbestellung Ihres Weihnachtsgänseessens erforderlich ist, um sicherzustellen, dass wir Ihnen die beste Qualität und den besten Service bieten können.
             </p>
             <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                desktop:text-2xl
-                desktopLarge:text-4xl
+                desktop:text-xl
+                desktopLarge:text-xl
             ">
                 Sichern Sie sich Ihr köstliches Weihnachtsgans und genießen Sie eine sorgenfreie und festliche Zeit mit Ihren Liebsten. Wir freuen uns darauf, Ihnen einen winterlichen Hochgenuss zu bieten.
             </p>
