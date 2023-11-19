@@ -21,6 +21,7 @@ const CustomerForm = () => {
         },
         agreement: false,
     });
+    const randomNumber = Math.floor(Math.random() * 100000) + 1
     const [boxAdd, setBoxAdd] = useState(false)
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     const [selectedPickupTime, setSelectedPickupTime] = useState('');
@@ -125,6 +126,7 @@ const CustomerForm = () => {
             last_name: formData.user.last_name,
             email: formData.user.email,
             phone_number: formData.user.phone,
+            order_number:randomNumber,
             products: [{
                 product_name: "Ganspaket",
                 product_quantity: selectedPickupQuantity
@@ -371,7 +373,7 @@ const CustomerForm = () => {
                         '>CÔCÔ</span>
                         <span className='font-bold text-center desktop:text-3xl'>Vielen Dank für Ihren Einkauf bei</span>
                         <p className='font-bold text-center desktop:text-3xl'>CÔCÔ</p>
-                        <span className='text-center desktop:text-3xl'>Ihre Bestellung Nr.{formData.user.phone} wird berücksichtigt.</span>
+                        <span className='text-center desktop:text-3xl'>Ihre Bestellung Nr.{randomNumber} wird berücksichtigt.</span>
                         <span className='text-center desktop:text-3xl'>Wir senden Ihnen eine Bestellbestätigung an:{formData.user.email}</span>
                     </div>
                 </Modal>

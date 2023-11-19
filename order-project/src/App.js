@@ -30,7 +30,9 @@ function App() {
           path="/"
           element={
             <div className="bg-backGround flex flex-col relative w-full overflow-y-scroll">
-              <span className="fusion-imageframe imageframe-none imageframe-1 hover-type-none pulsate top-0 right-0">
+              <span className="fusion-imageframe imageframe-none imageframe-1 hover-type-none pulsate top-0 right-0
+                mobileSmall:top-[-60px] mobileSmall:right-[-60px]
+              ">
                 <img
                   src={Logo}
                   className="w-[280px] h-auto"
