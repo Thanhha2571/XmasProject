@@ -41,18 +41,18 @@ const ProductItem = (props) => {
                 <p className="flex text-2xl text-textColor font-Changa leading-loose font-bold
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-2xl
-                desktop:text-3xl
-                desktopLarge:text-4xl
+                laptop:text-xl
+                desktop:text-2xl
+                desktopLarge:text-2xl
             ">
                     In jeder Gans stecken 20 Stunden Vorbereitung und Liebe zum Detail.
                 </p>
                 <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-2xl
-                desktop:text-3xl
-                desktopLarge:text-4xl
+                laptop:text-xl
+                desktop:text-2xl
+                desktopLarge:text-2xl
             ">
                     Wir beginnen mit einer marinierenden Mischung aus winterlichen Gewürzen, gefolgt von einer Füllung mit Äpfeln, Pflaumen, Zwiebeln und weiteren Gewürzen. Anschließend ruht die Gans für 12-18 Stunden, damit die Aromen in das zarte Fleisch einziehen können.
                 </p>
@@ -76,9 +76,9 @@ const ProductItem = (props) => {
                 <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-2xl
-                desktop:text-3xl
-                desktopLarge:text-4xl
+                laptop:text-xl
+                desktop:text-2xl
+                desktopLarge:text-2xl
             ">
                     Das beim Garen austretende, würzige Fett wird in unserer köstlichen Sauce verwendet und dient auch dazu, die Gans während des Garprozesses zu bestreichen.
                 </p>
@@ -102,9 +102,9 @@ const ProductItem = (props) => {
                 <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
-                laptop:text-2xl
-                desktop:text-3xl
-                desktopLarge:text-4xl
+                laptop:text-xl
+                desktop:text-2xl
+                desktopLarge:text-2xl
             ">
                     Schließlich wird die Gans auf hoher Temperatur gebacken, um eine leckere, knusprige Haut zu erzielen.
                 </p>

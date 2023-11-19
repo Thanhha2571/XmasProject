@@ -55,7 +55,7 @@ const TextIntro = () => {
                 Freuen Sie sich auf den Höhepunkt des Festes: unsere köstliche Gans, meisterhaft zubereitet von unseren erfahrenen Köchen.
             </p>
 
-            <p className="flex text-2xl text-textWarning font-Changa leading-loose
+            <p className="flex text-2xl text-textColor font-Changa leading-loose
                 mobileSmall:text-lg mobileSmall:text-center
                 tablet:text-xl
                 desktop:text-3xl

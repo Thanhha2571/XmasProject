@@ -163,7 +163,7 @@ const CustomerForm = () => {
         desktopLarge:text-[100px] desktopLarge:gap-10
 
             ">Bestellformular</div>
-            <div className="w-full text-center font-bold text-textWarning font-Montserrat relative italic
+            <div className="w-full text-center font-bold text-textColor font-Montserrat relative italic
                 mobileSmall:text-[12px]
                 tablet:text-[15px]
                 laptop:text-[15px]

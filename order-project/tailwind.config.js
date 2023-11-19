@@ -36,15 +36,20 @@ module.exports = {
       // => @media (min-width: 320px) { ... }
       'mobileLarge': '425px',
       // => @media (min-width: 425px) { ... }
+      'mobileLarger': '600px',
+      // => @media (min-width: 600px) { ... }
       'tablet': '768px',
       // => @media (min-width: 768px) { ... }
       'laptop': '1024px',
       // => @media (min-width: 1024px) { ... }
-
       'desktop': '1440px',
       // => @media (min-width: 1280px) { ... }
+      'desktopMedium': '1680px',
+      // => @media (min-width: 1680px) { ... }
       'desktopLarge': '1920px',
       // => @media (min-width: 1920px) { ... }
+      'desktopLarger': '2200px',
+      // => @media (min-width: 2200px) { ... }
     },
 
   },
