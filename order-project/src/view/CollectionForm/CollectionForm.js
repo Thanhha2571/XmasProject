@@ -12,6 +12,7 @@ const CustomerForm = () => {
     const [storedValue, setStoredValue] = useState()
     const [listOrder, setListOrder] = useState()
     const [loading, setLoading] = useState(false);
+    const [discount, setDiscount] = useState(false)
     const [formData, setFormData] = useState({
         user: {
             first_name: '',
@@ -21,6 +22,7 @@ const CustomerForm = () => {
             zip_code: '',
             city: '',
             street: '',
+            discount: '',
         },
         agreement: false,
     });
@@ -28,6 +30,17 @@ const CustomerForm = () => {
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     const [selectedPickupTime, setSelectedPickupTime] = useState('');
     const [selectedPickupQuantity, setselectedPickupQuantity] = useState('');
+    const [isDiscountCodeTrue, setIsDiscountCodeTrue] = useState(false);
+
+    useEffect (() => {
+        if (formData.user.discount === "NXT123" || formData.user.discount === "LTTH456" || formData.user.discount === "KTP789" ||formData.user.discount === "NDQ10" ) {
+            setIsDiscountCodeTrue(true);
+            // You can perform additional actions for a true discount code if needed.
+        } else {
+            setIsDiscountCodeTrue(false);
+            // You can perform additional actions for a false discount code if needed.
+        }
+    },[formData.user.discount])
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -36,7 +49,8 @@ const CustomerForm = () => {
                 ...prevData,
                 [name]: checked,
             }));
-        } else {
+        }
+        else {
             setFormData((prevData) => ({
                 ...prevData,
                 user: {
@@ -54,10 +68,10 @@ const CustomerForm = () => {
             return;
         }
         setLoading(true);
-
         try {
             const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
                 pick_up_time: selectedPickupTime,
+                discount_code: formData.user.discount,
                 pick_up_place: selectedPickupAddress,
                 first_name: formData.user.first_name,
                 last_name: formData.user.last_name,
@@ -292,7 +306,37 @@ const CustomerForm = () => {
                         >Nur am 24.12 zwischen 12.00 - 15.00 Uhr</label>
                     </div>
                 </div>
-
+                <div className="flex w-full font-Changa
+                        mobileSmall:flex-col mobileSmall:gap-2
+                        tablet:w-full
+                    ">
+                    <input
+                        type="text"
+                        id="discount"
+                        name="discount"
+                        value={formData.user.discount}
+                        onChange={handleChange}
+                        // required
+                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-lg focus:border-textColor focus:border-4
+                            desktop:placeholder:text-xl desktop:text-xl
+                            desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
+                            "
+                        placeholder='Rabattaktion'
+                    />
+                    {formData.user.discount !== "" && (
+                        <>
+                            {isDiscountCodeTrue ? (
+                                <div className="text-green-500 font-bold">
+                                    Ihr Gutschein ist gültig
+                                </div>
+                            ) : (
+                                <div className="text-red-500 font-bold">
+                                    Ihr Gutschein ist ungültig
+                                </div>
+                            )}
+                        </>
+                    )}
+                </div>
                 <div className='flex justify-start gap-2 w-full'>
                     <input
                         type="checkbox"
