@@ -71,7 +71,6 @@ const CustomerForm = () => {
         try {
             const { data } = await axios.post("https://orders-chrismast-ten.vercel.app/api/order/orderForm", {
                 pick_up_time: selectedPickupTime,
-                discount_code: formData.user.discount,
                 pick_up_place: selectedPickupAddress,
                 first_name: formData.user.first_name,
                 last_name: formData.user.last_name,
@@ -79,7 +78,8 @@ const CustomerForm = () => {
                 phone_number: formData.user.phone,
                 products: [{
                     product_name: "Ganspaket",
-                    product_quantity: selectedPickupQuantity
+                    product_quantity: selectedPickupQuantity,
+                    discount_code: formData.user.discount,
                 }]
             });
 
