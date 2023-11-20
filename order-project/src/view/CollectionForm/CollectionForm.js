@@ -119,7 +119,7 @@ const CustomerForm = () => {
                 laptop:text-[15px]
                 desktop:text-[15px]
                 desktopLarge:text-[15px]
-            ">Bitte bestellen Sie Ihr Gänsepaket spätestens 2 Tage vor Abholtermin. Letze Bestellannahme ist am 21.12.2023</div>
+            ">Bitte bestellen Sie Ihr Gänsepaket spätestens 2 Tage vor Abholtermin. Letze Bestellannahme ist am 22.12.2023</div>
             <div className='w-full flex flex-col justify-center items-center font-Changa text-textColor
             '>
                 <p className='font-bold
