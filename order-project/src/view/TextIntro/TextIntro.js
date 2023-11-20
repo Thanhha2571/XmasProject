@@ -64,7 +64,7 @@ const TextIntro = () => {
                 Unsere Weihnachtsgänse sind am 24.12.2023 von 12:00 Uhr bis 15:00 Uhr erhältlich.
             </p>
 
-            <p className="flex text-2xl text-textColor font-Changa leading-loose
+            <p className="bg-stone-50 flex text-2xl text-textWarning font-Changa leading-loose
                 mobileSmall:text-base mobileSmall:text-center
                 tablet:text-xl
                 desktop:text-xl
