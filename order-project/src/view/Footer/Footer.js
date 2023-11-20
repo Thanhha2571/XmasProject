@@ -41,7 +41,7 @@ const Footer = () => {
                 desktopLarger:gap-16
                 ">
                     <div className="flex flex-col">
-                        <p className="w-full font-bold text-textWarning text-[50px] font-DancingScript
+                        <p className="w-full font-bold text-footerTitle text-[50px] font-DancingScript
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
                             tablet:text-[15px]
@@ -241,7 +241,7 @@ const Footer = () => {
                             tablet:text-[15px]
                             desktop:hidden
                     ">Kontakt:</p> */}
-                        <p className="w-full font-bold text-textWarning text-[50px] font-DancingScript
+                        <p className="w-full font-bold text-footerTitle text-[50px] font-DancingScript
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
                             tablet:text-[15px]
@@ -440,7 +440,7 @@ const Footer = () => {
                             tablet:text-[15px]
                             desktop:hidden
                     ">Kontakt:</p> */}
-                        <p className="w-full font-bold text-textWarning text-[50px] font-DancingScript
+                        <p className="w-full font-bold text-footerTitle text-[50px] font-DancingScript
                             mobileSmall:text-[15px]
                             mobileLarge:text-[15px]
                             tablet:text-[15px]

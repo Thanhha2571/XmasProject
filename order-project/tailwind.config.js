@@ -12,9 +12,9 @@ module.exports = {
         'itemsBackground': '#808080',
         'textWarning': '#FF0000',
         'textTitle': '#fcd451',
-        'footerBackground': '#E3D3C4',
-        'footerText': '#1f4335',
-        'footerTitle': '#525252',
+        'footerBackground': '#202533',
+        'footerText': '#fff',
+        'footerTitle': '#d8aa4c',
         'buttonIcon': '#be0000'
       },
       // colors: {

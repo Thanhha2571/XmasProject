@@ -106,7 +106,21 @@ const CustomerForm = () => {
                 desktop:text-[15px]
                 desktopLarge:text-[15px]
             ">Bitte bestellen Sie Ihr Gänsepaket spätestens 2 Tage vor Abholtermin. Letze Bestellannahme ist am 21.12.2023</div>
-            <div></div>
+            <div className='w-full flex flex-col justify-center items-center font-Changa text-textColor
+            '>
+                <p className='font-bold
+                    mobileSmall:text-[22px]
+                    laptop:text-2xl
+                    desktop:text-[26px]
+                '>Ganspaket für 4 Personen</p>
+                <p className='
+                    mobileSmall:text-[15px]
+                    laptop:text-xl
+                '>148,-€ <span className='
+                    mobileSmall:text-[9px]
+                    laptop:text-[11px]
+                '>(inkl. Mwst)</span></p>
+            </div>
             <form
                 className="font-Montserrat flex flex-col justify-center items-center gap-5 w-full
                 tablet:px-8 tablet:gap-6
