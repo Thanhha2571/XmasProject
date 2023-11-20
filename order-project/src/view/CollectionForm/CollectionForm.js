@@ -76,11 +76,11 @@ const CustomerForm = () => {
                 last_name: formData.user.last_name,
                 email: formData.user.email,
                 phone_number: formData.user.phone,
-                products: [{
+                products: {
                     product_name: "Ganspaket",
                     product_quantity: selectedPickupQuantity,
                     discount_code: formData.user.discount,
-                }]
+                }
             });
 
             setBoxAdd(true);
