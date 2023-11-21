@@ -30,17 +30,22 @@ const CustomerForm = () => {
     const [selectedPickupAddress, setSelectedPickupAddress] = useState('');
     const [selectedPickupTime, setSelectedPickupTime] = useState('');
     const [selectedPickupQuantity, setselectedPickupQuantity] = useState('');
-    const [isDiscountCodeTrue, setIsDiscountCodeTrue] = useState(false);
+    const [discountErrorMessage, setDiscountErrorMessage] = useState('');
 
-    useEffect (() => {
-        if (formData.user.discount === "NXT123" || formData.user.discount === "LTTH456" || formData.user.discount === "KTP789" ||formData.user.discount === "NDQ10" ) {
-            setIsDiscountCodeTrue(true);
-            // You can perform additional actions for a true discount code if needed.
+    const handleVoucher = () => {
+        if (
+            formData.user.discount === "NXT123" ||
+            formData.user.discount === "LTTH456" ||
+            formData.user.discount === "KTP789" ||
+            formData.user.discount === "NDQ10"
+        ) {
+            setDiscountErrorMessage('');
+            setDiscount(true);
         } else {
-            setIsDiscountCodeTrue(false);
-            // You can perform additional actions for a false discount code if needed.
+            setDiscountErrorMessage('Bitte geben Sie einen gültigen Gutscheincode ein.');
+            setDiscount(false);
         }
-    },[formData.user.discount])
+    };
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -310,28 +315,45 @@ const CustomerForm = () => {
                         mobileSmall:flex-col mobileSmall:gap-2
                         tablet:w-full
                     ">
-                    <input
-                        type="text"
-                        id="discount"
-                        name="discount"
-                        value={formData.user.discount}
-                        onChange={handleChange}
-                        // required
-                        className="placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid border-textColor rounded-lg focus:border-textColor focus:border-4
+                    <div className='flex flex-col'>
+                        <label className="text-textColor
+                            mobileSmall:text-xl
+                            desktop:text-2xl
+                        ">Gutscheincode Eingeben</label>
+                        <label className="text-textColor italic
+                            mobileSmall:text-[12px]
+                            desktop:text-[16px]
+                        ">(Ihr Vorteil bei dieser Bestellung 128,-€ )</label>
+                    </div>
+
+                    <div className='flex flex-row gap-3 w-full h-auto'>
+                        <input
+                            type="text"
+                            id="discount"
+                            name="discount"
+                            value={formData.user.discount}
+                            onChange={handleChange}
+                            // required
+                            className={`w-[185px] placeholder:italic placeholder:text-sm placeholder:text-textColor bg-backGround text-textColor border-2 border-solid ${discount ? 'border-red-500' : 'border-textColor'} rounded-lg focus:border-textColor focus:border-4
                             desktop:placeholder:text-xl desktop:text-xl
                             desktopLarge:placeholder:text-3xl desktopLarge:py-4 desktopLarge:text-3xl
-                            "
-                        placeholder='Rabattaktion'
-                    />
+                        `}
+                            placeholder='Gutscheincode Eingeben'
+                        />
+                        <div className="w-[90px] font-Changa flex justify-center py-2 px-3 bg-buttonIcon text-textColor font-extrabold hover:border-4 hover:bg-red-950 rounded-md cursor-pointer "
+                            onClick={handleVoucher}
+                        >
+                            <button className="
+                    desktop:text-xl
+                    desktopLarge:text-3xl" type='button'>EINLÖSEN</button>
+                        </div>
+                    </div>
+
                     {formData.user.discount !== "" && (
                         <>
-                            {isDiscountCodeTrue ? (
-                                <div className="text-green-500 font-bold">
-                                    Ihr Gutschein ist gültig
-                                </div>
-                            ) : (
+                            {discountErrorMessage && (
                                 <div className="text-red-500 font-bold">
-                                    Ihr Gutschein ist ungültig
+                                    {discountErrorMessage}
                                 </div>
                             )}
                         </>
