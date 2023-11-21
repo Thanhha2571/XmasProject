@@ -34,7 +34,7 @@ const CustomerForm = () => {
 
     const handleVoucher = () => {
         if (
-            formData.user.discount === "WEIHNACHT2023" 
+            formData.user.discount === "WEIHNACHT2023"
         ) {
             setDiscountErrorMessage('');
             setDiscount(true);
@@ -317,10 +317,10 @@ const CustomerForm = () => {
                             mobileSmall:text-xl
                             desktop:text-2xl
                         ">Gutscheincode Eingeben</label>
-                        <label className="text-textColor italic
+                        {/* <label className="text-textColor italic
                             mobileSmall:text-[12px]
                             desktop:text-[16px]
-                        ">(Ihr Vorteil bei dieser Bestellung 128,-€ )</label>
+                        ">(Ihr Vorteil bei dieser Bestellung 128,-€ )</label> */}
                     </div>
 
                     <div className='flex flex-row gap-3 w-full h-auto'>
@@ -353,6 +353,10 @@ const CustomerForm = () => {
                                     {discountErrorMessage}
                                 </div>
                             )}
+
+                            {discount && <div className="text-red-500 font-bold">
+                                Ihr Vorteil bei dieser Bestellung {selectedPickupQuantity*20},-€
+                            </div>}
                         </>
                     )}
                 </div>
