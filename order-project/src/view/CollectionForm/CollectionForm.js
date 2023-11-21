@@ -34,10 +34,7 @@ const CustomerForm = () => {
 
     const handleVoucher = () => {
         if (
-            formData.user.discount === "NXT123" ||
-            formData.user.discount === "LTTH456" ||
-            formData.user.discount === "KTP789" ||
-            formData.user.discount === "NDQ10"
+            formData.user.discount === "WEIHNACHT2023" 
         ) {
             setDiscountErrorMessage('');
             setDiscount(true);
