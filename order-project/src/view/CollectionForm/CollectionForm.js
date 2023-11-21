@@ -33,8 +33,9 @@ const CustomerForm = () => {
     const [discountErrorMessage, setDiscountErrorMessage] = useState('');
 
     const handleVoucher = () => {
+        const discountCode = formData.user.discount.toLowerCase()
         if (
-            formData.user.discount === "WEIHNACHT2023"
+            discountCode === "weihnacht2023"
         ) {
             setDiscountErrorMessage('');
             setDiscount(true);
@@ -354,7 +355,7 @@ const CustomerForm = () => {
                                 </div>
                             )}
 
-                            {discount && <div className="text-red-500 font-bold">
+                            {discount && <div className="text-yellow-400 font-bold">
                                 Ihr Vorteil bei dieser Bestellung {selectedPickupQuantity*20},-€
                             </div>}
                         </>
